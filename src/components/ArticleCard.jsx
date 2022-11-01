@@ -1,6 +1,4 @@
 const ArticleCard = (props) => {
-  console.log(props);
-
   return (
     <div className="card">
       <p>Article Id: {props.article_id}</p>
@@ -9,7 +7,7 @@ const ArticleCard = (props) => {
       <p>Date of post:{props.created_at}</p>
       <p>Votes:{props.votes}</p>
       <p>Comment count:{props.comment_count}</p>
-      votes
+
       <button className="btnReadArticle">Read article</button>
     </div>
   );
