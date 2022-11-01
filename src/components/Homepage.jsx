@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
-
 import ArticleCard from "./ArticleCard";
 
-const Homepage = () => {
-  const [articleList, setArticleList] = useState([]);
+const Homepage = (props) => {
+  const { articleList, setArticleList } = props;
 
-  useEffect(() => {
-    fetch("https://nc-news-julian.herokuapp.com/api/articles")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        // console.log(data);
-        setArticleList(data);
-      });
-  }, []);
+  fetch("https://nc-news-julian.herokuapp.com/api/articles")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      setArticleList(data);
+    });
+
+  useEffect(() => {}, [articleList]);
 
   return (
     <>
       <ul>
         {articleList.map((article) => {
           return (
-            <li className="articlecards">
+            <li key={(article, article.article_id)} className="articlecards">
               <ArticleCard
                 article_id={article.article_id}
                 title={article.title}

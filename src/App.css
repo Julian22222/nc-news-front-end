@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(194, 181, 168);
 }
 
 .App-logo {
@@ -52,4 +53,11 @@
   display: block;
   margin-left: auto;
   margin-right: 0;
+}
+
+.navBarTopics {
+  display: inline;
+  justify-content: end;
+  margin-right: 15px;
+  margin-left: 15px;
 }
