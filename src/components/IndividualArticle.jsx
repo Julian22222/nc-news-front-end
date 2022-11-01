@@ -2,27 +2,28 @@ import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
 import { useParams } from "react-router-dom";
 
-const CodingElement = (props) => {
-  const [topicArticleList, setTopicArticleList] = useState([]);
+const IndividualArticle = (props) => {
+  const [article, setArticle] = useState([]);
 
-  const { topic } = useParams();
+  const { article_id } = useParams();
   const { articleList, setArticleList } = props;
   const aList = [...articleList];
 
   useEffect(() => {
     fetch(
-      `https://nc-news-julian.herokuapp.com/api/articles?topic=${topic}`
+      `https://nc-news-julian.herokuapp.com/api/articles/${article_id}`
     ).then((res) => {
       res.json().then((data) => {
-        setTopicArticleList(data);
+        console.log(data);
+        setArticle(data);
       });
     });
-  }, [topic]);
+  }, [article_id]);
 
   return (
     <>
       <ul>
-        {topicArticleList.map((item) => {
+        {articleList.map((item) => {
           return (
             <li key={item.article_id} className="articlecards">
               <ArticleCard
@@ -41,4 +42,4 @@ const CodingElement = (props) => {
   );
 };
 
-export default CodingElement;
+export default IndividualArticle;

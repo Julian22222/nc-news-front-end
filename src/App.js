@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 import NavBarTopics from "./components/NavBarTopics";
 import CodingElement from "./components/CodingElement";
+import IndividualArticle from "./components/IndividualArticle";
 
 function App() {
   const [articleList, setArticleList] = useState([]);
@@ -27,6 +28,15 @@ function App() {
             path="/:topic"
             element={
               <CodingElement
+                articleList={articleList}
+                setArticleList={setArticleList}
+              />
+            }
+          />
+          <Route
+            path="/:article_id"
+            element={
+              <IndividualArticle
                 articleList={articleList}
                 setArticleList={setArticleList}
               />
