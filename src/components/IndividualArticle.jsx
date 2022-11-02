@@ -1,20 +1,16 @@
 import { useState, useEffect } from "react";
-import ArticleCard from "./ArticleCard";
 import { useParams } from "react-router-dom";
 
-const IndividualArticle = (props) => {
+const IndividualArticle = () => {
   const [article, setArticle] = useState([]);
 
   const { article_id } = useParams();
-  const { articleList, setArticleList } = props;
-  const aList = [...articleList];
 
   useEffect(() => {
     fetch(
       `https://nc-news-julian.herokuapp.com/api/articles/${article_id}`
     ).then((res) => {
       res.json().then((data) => {
-        console.log(data);
         setArticle(data);
       });
     });
@@ -22,22 +18,16 @@ const IndividualArticle = (props) => {
 
   return (
     <>
-      <ul>
-        {articleList.map((item) => {
-          return (
-            <li key={item.article_id} className="articlecards">
-              <ArticleCard
-                article_id={item.article_id}
-                title={item.title}
-                topic={item.topic}
-                created_at={item.created_at}
-                votes={item.votes}
-                comment_count={item.comment_count}
-              />
-            </li>
-          );
-        })}
-      </ul>
+      <div className="card">
+        <p>Article Id: {article.article_id}</p>
+        <p>Title: {article.title}</p>
+        <p>Topic: {article.topic}</p>
+        <p>Author: {article.author}</p>
+        <p>Body: {article.body}</p>
+        <p>Date of post:{article.created_at}</p>
+        <p>Votes:{article.votes}</p>
+        <p>Comment count:{article.comment_count}</p>
+      </div>
     </>
   );
 };
