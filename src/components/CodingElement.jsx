@@ -2,12 +2,10 @@ import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
 import { useParams } from "react-router-dom";
 
-const CodingElement = (props) => {
+const CodingElement = () => {
   const [topicArticleList, setTopicArticleList] = useState([]);
 
   const { topic } = useParams();
-  const { articleList, setArticleList } = props;
-  const aList = [...articleList];
 
   useEffect(() => {
     fetch(

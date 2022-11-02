@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
 
-const Homepage = (props) => {
-  const { articleList, setArticleList } = props;
+const Homepage = () => {
+  const [articleList, setArticleList] = useState([]);
 
   fetch("https://nc-news-julian.herokuapp.com/api/articles")
     .then((res) => {
