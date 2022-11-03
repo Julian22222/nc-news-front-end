@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ArticleLiker = (props) => {
   let { votes, article_id } = props;
 
-  const [voteCounter, setVoteCounter] = useState(0);
+  const [voteIncrementCounter, setVoteIncrementCounter] = useState(0);
+  const [voteDecrementCounter, setVoteDecrementCounter] = useState(0);
 
   const handleIncrementVote = () => {
-    setVoteCounter((currentLikes) => currentLikes + 1);
+    setVoteIncrementCounter((currentLikes) => currentLikes + 1);
 
     fetch(`https://nc-news-julian.herokuapp.com/api/articles/${article_id}`, {
       method: "PATCH",
@@ -17,20 +18,32 @@ const ArticleLiker = (props) => {
     }).then((response) => response.json());
   };
 
-  console.log(voteCounter);
-
   const handleDecrementVote = () => {
-    if (voteCounter !== 0) {
-      setVoteCounter((currentLikes) => currentLikes - 1);
-    }
+    setVoteDecrementCounter((currentLikes) => currentLikes - 1);
+
+    console.log(voteDecrementCounter);
+    fetch(`https://nc-news-julian.herokuapp.com/api/articles/${article_id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ inc_votes: -1 }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }).then((response) => response.json());
   };
 
   return (
     <>
-      <button disabled={voteCounter !== 0} onClick={handleIncrementVote}>
+      <p>Votes: {votes + voteIncrementCounter + voteDecrementCounter}</p>
+      <button
+        disabled={voteIncrementCounter !== 0}
+        onClick={handleIncrementVote}
+      >
         Like this article
       </button>
-      <button disabled={voteCounter == 0} onClick={handleDecrementVote}>
+      <button
+        disabled={voteDecrementCounter !== 0}
+        onClick={handleDecrementVote}
+      >
         Dislike this article
       </button>
     </>

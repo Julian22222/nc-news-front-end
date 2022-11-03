@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ArticleLiker from "./ArticleLiker";
-// import Comments from "./Comments";
+import Comments from "./Comments";
 
 const IndividualArticle = () => {
   const [article, setArticle] = useState([]);
@@ -30,7 +30,6 @@ const IndividualArticle = () => {
         <p>Author: {article.author}</p>
         <p>Body: {article.body}</p>
         <p>Date of post:{article.created_at}</p>
-        <p>Votes:{article.votes}</p>
         <p>Comment count:{article.comment_count}</p>
         <ArticleLiker votes={article.votes} article_id={article.article_id} />
         {/* <Comments article_id={article.article_id} /> */}

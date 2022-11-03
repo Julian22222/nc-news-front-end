@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 
 const NavBarTopics = () => {
-  const myTopics = ["home", "coding", "cooking", "football"];
+  //   const { article_id } = useParams();
+  const myTopics = ["all", "coding", "cooking", "football"];
 
   return (
     <div className="topicsTitle">
       <strong> Topics: </strong>
       {myTopics.map((topic) => {
-        return topic === "home" ? (
+        return topic === "all" ? (
           <Link to={`/`}>
             <li className="navBarTopics" key={topic}>
               {topic}
