@@ -32,7 +32,7 @@ const IndividualArticle = () => {
         <p>Date of post:{article.created_at}</p>
         <p>Comment count:{article.comment_count}</p>
         <ArticleLiker votes={article.votes} article_id={article.article_id} />
-        {/* <Comments article_id={article.article_id} /> */}
+        <Comments article_id={article.article_id} />
       </div>
     </>
   );
