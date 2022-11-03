@@ -3,16 +3,20 @@ import ArticleCard from "./ArticleCard";
 
 const Homepage = () => {
   const [articleList, setArticleList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  fetch("https://nc-news-julian.herokuapp.com/api/articles")
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      setArticleList(data);
-    });
+  useEffect(() => {
+    fetch("https://nc-news-julian.herokuapp.com/api/articles")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setArticleList(data);
+        setIsLoading(false);
+      });
+  }, [articleList]);
 
-  useEffect(() => {}, [articleList]);
+  if (isLoading) return <h2>Loading ...</h2>;
 
   return (
     <>
