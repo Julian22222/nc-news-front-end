@@ -1,8 +1,11 @@
 import NavBarTopics from "./NavBarTopics";
-const Header = () => {
+import User from "./User";
+const Header = (props) => {
+  const { user, setUser } = props;
   return (
     <>
       <h1>NC News</h1>
+      <User user={user} setUser={setUser} />
       <NavBarTopics />
     </>
   );

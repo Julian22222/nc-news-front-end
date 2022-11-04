@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ArticleLiker from "./ArticleLiker";
 import Comments from "./Comments";
+import User from "./User";
 
-const IndividualArticle = () => {
+const IndividualArticle = ({ user, setUser }) => {
   const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
@@ -32,7 +33,11 @@ const IndividualArticle = () => {
         <p>Date of post:{article.created_at}</p>
         <p>Comment count:{article.comment_count}</p>
         <ArticleLiker votes={article.votes} article_id={article.article_id} />
-        <Comments article_id={article.article_id} />
+        <Comments
+          article_id={article.article_id}
+          user={user}
+          setUser={setUser}
+        />
       </div>
     </>
   );
