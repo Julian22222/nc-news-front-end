@@ -1,9 +1,16 @@
 import { useState, useEffect } from "react";
 import CommentAddButton from "./CommentAddButton";
+import CommentsAdding from "./CommentsAdding";
 
 const Comments = (props) => {
   //   console.log(props);
-  const { article_id, user, setUser } = props;
+  const {
+    article_id,
+    user,
+    setUser,
+    commentIncrementCounter,
+    setCommentIncrementCounter,
+  } = props;
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isRendering, setIsRendering] = useState(false);
@@ -19,14 +26,9 @@ const Comments = (props) => {
         setIsLoading(false);
       });
     });
-  }, [article_id]);
+  }, [comments]);
 
-  const handleAddaComment = (event) => {
-    event.preventDefault();
-    const newComment = [...leaveComment];
-    SetInput();
-    setComments([newComment, ...comments]);
-  };
+  //[article_id]
 
   if (isLoading) return <h2>Loading ...</h2>;
 
@@ -39,7 +41,6 @@ const Comments = (props) => {
         user={user}
         setUser={setUser}
       />
-      {/* if(user.name !=="" &&  user.password !=="") then-> */}
 
       {isRendering ? (
         <>
@@ -51,7 +52,15 @@ const Comments = (props) => {
               }}
               value={input}
             ></textarea>
-            <button onClick={handleAddaComment}>submit</button>
+            <CommentsAdding
+              SetInput={SetInput}
+              input={input}
+              setLeaveComment={setLeaveComment}
+              article_id={article_id}
+              commentIncrementCounter={commentIncrementCounter}
+              setCommentIncrementCounter={setCommentIncrementCounter}
+            />
+            {/* <button onClick={handleAddaComment}>submit</button> */}
           </form>
         </>
       ) : null}
@@ -61,6 +70,7 @@ const Comments = (props) => {
         {comments.map((myComment) => {
           return (
             <li key={myComment.comment_id} className="articlecards">
+              <p>Author: {myComment.author}</p>
               {myComment.body}
             </li>
           );

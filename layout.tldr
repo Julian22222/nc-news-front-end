@@ -16,8 +16,8 @@
             "parentId": "page",
             "childIndex": 1,
             "point": [
-              -603.56,
-              593.66
+              -1232.5,
+              -343.79
             ],
             "rotation": 0,
             "text": "API:\nGET - /api/articles - get all articles\nGET - /api/topics -get all topics\nGET - /api/articles/:article_id  - get article by id\n GET - /api/users -get all user\nPATCH - /api/articles/:article_id - edit article\nGET - /api/articles/:article_id/comments - get comments\nPOST - /api/articles/:article_id/comments - post comment\nDELETE - /api/comments/:comments/:commet_id - delete comment ",
@@ -1685,17 +1685,17 @@
             "parentId": "page",
             "childIndex": 63,
             "point": [
-              -581.86,
-              395.63
+              -609.94,
+              442.14
             ],
             "rotation": 0,
-            "text": "votes",
+            "text": "(votes)",
             "style": {
               "color": "black",
               "size": "small",
               "isFilled": false,
               "dash": "draw",
-              "scale": 1.356098293432532,
+              "scale": 1.638775197527543,
               "font": "script",
               "textAlign": "middle"
             }
@@ -1707,11 +1707,11 @@
             "parentId": "page",
             "childIndex": 64,
             "point": [
-              -435.24,
-              335.29
+              -416.27,
+              333.13
             ],
             "rotation": 0,
-            "bend": 0.00009858660561687091,
+            "bend": 0,
             "handles": {
               "start": {
                 "id": "start",
@@ -1726,8 +1726,8 @@
                 "id": "end",
                 "index": 1,
                 "point": [
-                  49.63,
-                  61.16
+                  48.42,
+                  96.36
                 ],
                 "canBind": true
               },
@@ -1735,8 +1735,8 @@
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  24.82,
-                  30.58
+                  24.21,
+                  48.18
                 ]
               }
             },
@@ -1763,8 +1763,8 @@
             "parentId": "page",
             "childIndex": 65,
             "point": [
-              -440.7,
-              405.42
+              -418.15,
+              437.41
             ],
             "rotation": 0,
             "text": "comments",
@@ -1773,7 +1773,7 @@
               "size": "small",
               "isFilled": false,
               "dash": "draw",
-              "scale": 1,
+              "scale": 1.3518158025466949,
               "font": "script",
               "textAlign": "middle"
             }
@@ -1990,6 +1990,228 @@
               0.5,
               0.5
             ]
+          },
+          "af928722-5c57-452c-0621-7f5527fad72d": {
+            "id": "af928722-5c57-452c-0621-7f5527fad72d",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 72,
+            "point": [
+              -617.83,
+              402.73
+            ],
+            "rotation": 0,
+            "text": "ArticleLiker",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1.4024611259844089,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "dfbbef62-abd5-4c70-26fe-cc5da2bd6f78": {
+            "id": "dfbbef62-abd5-4c70-26fe-cc5da2bd6f78",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 73,
+            "point": [
+              -310.31,
+              505.39
+            ],
+            "rotation": 0,
+            "bend": 0.00004988780727731544,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  0,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  35.79,
+                  60.35
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  17.9,
+                  30.18
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "3956e68c-514e-49db-23db-071cf43ff297": {
+            "id": "3956e68c-514e-49db-23db-071cf43ff297",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 74,
+            "point": [
+              -340.42,
+              580.36
+            ],
+            "rotation": 0,
+            "text": "CommentsAdding",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1.1877851149104297,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "32521fc2-0e16-4ab6-1654-1e3bdec3206f": {
+            "id": "32521fc2-0e16-4ab6-1654-1e3bdec3206f",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 75,
+            "point": [
+              -456.81,
+              487.56
+            ],
+            "rotation": 0,
+            "bend": 0.000055614603131132365,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  82.99,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  0,
+                  124.48
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  41.5,
+                  62.24
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "2dc102be-bc0f-4cf8-19e8-248aa51cca6d": {
+            "id": "2dc102be-bc0f-4cf8-19e8-248aa51cca6d",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 76,
+            "point": [
+              -594.86,
+              615.24
+            ],
+            "rotation": 0,
+            "text": "CommentsAddButton",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "27a0b30b-8799-4eac-2481-d7b1b4a779ef": {
+            "id": "27a0b30b-8799-4eac-2481-d7b1b4a779ef",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 77,
+            "point": [
+              -632.72,
+              659.64
+            ],
+            "rotation": 0,
+            "text": "How to add (Comment count) optimisticly?",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "d9924678-4028-4d19-0380-6d6826dc7cfd": {
+            "id": "d9924678-4028-4d19-0380-6d6826dc7cfd",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 78,
+            "point": [
+              -402.85,
+              269.01
+            ],
+            "rotation": 0,
+            "text": "const[commentIncrementCounter]=useState",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 0.7704848595539198,
+              "font": "script",
+              "textAlign": "middle"
+            }
           }
         },
         "bindings": {

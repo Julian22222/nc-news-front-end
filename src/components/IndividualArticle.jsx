@@ -6,6 +6,7 @@ import User from "./User";
 
 const IndividualArticle = ({ user, setUser }) => {
   const [article, setArticle] = useState([]);
+  const [commentIncrementCounter, setCommentIncrementCounter] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
 
@@ -31,12 +32,19 @@ const IndividualArticle = ({ user, setUser }) => {
         <p>Author: {article.author}</p>
         <p>Body: {article.body}</p>
         <p>Date of post:{article.created_at}</p>
-        <p>Comment count:{article.comment_count}</p>
-        <ArticleLiker votes={article.votes} article_id={article.article_id} />
+        <ArticleLiker
+          votes={article.votes}
+          article_id={article.article_id}
+          comment_count={article.comment_count}
+          commentIncrementCounter={commentIncrementCounter}
+          setCommentIncrementCounter={setCommentIncrementCounter}
+        />
         <Comments
           article_id={article.article_id}
           user={user}
           setUser={setUser}
+          commentIncrementCounter={commentIncrementCounter}
+          setCommentIncrementCounter={setCommentIncrementCounter}
         />
       </div>
     </>

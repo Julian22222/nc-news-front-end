@@ -1,7 +1,16 @@
 import { useState } from "react";
+import CommentsAdding from "./CommentsAdding";
 
 const ArticleLiker = (props) => {
-  let { votes, article_id } = props;
+  let {
+    votes,
+    article_id,
+    commentIncrementCounter,
+    setCommentIncrementCounter,
+    comment_count,
+  } = props;
+
+  console.log(commentIncrementCounter);
 
   const [voteIncrementCounter, setVoteIncrementCounter] = useState(0);
   const [voteDecrementCounter, setVoteDecrementCounter] = useState(0);
@@ -33,6 +42,7 @@ const ArticleLiker = (props) => {
 
   return (
     <>
+      <p>Comment count: {Number(comment_count) + commentIncrementCounter}</p>
       <p>Votes: {votes + voteIncrementCounter + voteDecrementCounter}</p>
       <button
         disabled={voteIncrementCounter !== 0}
