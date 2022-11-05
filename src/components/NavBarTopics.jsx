@@ -10,11 +10,9 @@ const NavBarTopics = () => {
       <strong> Topics: </strong>
       {myTopics.map((topic) => {
         return topic === "all" ? (
-          <Link to={`/`}>
-            <li className="navBarTopics" key={topic}>
-              {topic}
-            </li>
-          </Link>
+          <li className="navBarTopics" key={topic}>
+            <Link to={`/`}> {topic}</Link>
+          </li>
         ) : (
           <Link to={`/${topic}`}>
             <li className="navBarTopics" key={topic}>
