@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 const CommentAddButton = (props) => {
-  const [pleaselogin, setPleaseLogin] = useState(true);
+  const [pleaselogin, setPleaseLogin] = useState(false);
 
   const { setIsRendering, user, setUser } = props;
 
@@ -17,8 +17,8 @@ const CommentAddButton = (props) => {
 
   return (
     <>
-      <button onClick={handleComment}>add a comment...</button>;
-      {pleaselogin ? <h4>Please LogIn</h4> : null}
+      <button onClick={handleComment}>add a comment...</button>
+      {pleaselogin ? <h4 className="pleaseLogin">Please LogIn</h4> : null}
     </>
   );
 };

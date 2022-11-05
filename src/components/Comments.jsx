@@ -3,7 +3,6 @@ import CommentAddButton from "./CommentAddButton";
 import CommentsAdding from "./CommentsAdding";
 
 const Comments = (props) => {
-  //   console.log(props);
   const {
     article_id,
     user,
@@ -60,7 +59,6 @@ const Comments = (props) => {
               commentIncrementCounter={commentIncrementCounter}
               setCommentIncrementCounter={setCommentIncrementCounter}
             />
-            {/* <button onClick={handleAddaComment}>submit</button> */}
           </form>
         </>
       ) : null}

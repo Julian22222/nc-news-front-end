@@ -4,7 +4,9 @@ import ArticleLiker from "./ArticleLiker";
 import Comments from "./Comments";
 import User from "./User";
 
-const IndividualArticle = ({ user, setUser }) => {
+const IndividualArticle = (props) => {
+  const { user, setUser } = props;
+
   const [article, setArticle] = useState([]);
   const [commentIncrementCounter, setCommentIncrementCounter] = useState(0);
   const [isLoading, setIsLoading] = useState(true);

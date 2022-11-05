@@ -17,7 +17,7 @@ const User = (props) => {
       details.nickName == adminUser.nickName &&
       details.password == adminUser.password
     ) {
-      console.log("logged In");
+      //   console.log("logged In");
       setUser({
         nickName: details.nickName,
         name: details.name,

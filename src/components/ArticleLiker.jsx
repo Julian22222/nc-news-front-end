@@ -1,5 +1,4 @@
 import { useState } from "react";
-import CommentsAdding from "./CommentsAdding";
 
 const ArticleLiker = (props) => {
   let {
