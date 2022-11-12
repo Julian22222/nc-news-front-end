@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import CommentAddButton from "./CommentAddButton";
 import CommentsAdding from "./CommentsAdding";
+import React, { useContext } from "react";
+import Context from "./Context";
 
 const Comments = (props) => {
   const {
@@ -15,6 +17,8 @@ const Comments = (props) => {
   const [isRendering, setIsRendering] = useState(false);
   const [leaveComment, setLeaveComment] = useState([]);
   const [input, SetInput] = useState("");
+
+  const value = useContext(Context);
 
   useEffect(() => {
     fetch(
@@ -70,6 +74,7 @@ const Comments = (props) => {
             <li key={myComment.comment_id} className="articlecards">
               <p>Author: {myComment.author}</p>
               {myComment.body}
+              {value.isDelete ? <button>delete comment</button> : null}
             </li>
           );
         })}

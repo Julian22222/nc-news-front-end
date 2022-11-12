@@ -71,3 +71,31 @@
 .pleaseLogin {
   color: red;
 }
+
+.Usercard {
+  height: 150px;
+  margin: 2% 2%;
+  margin-left: 1%;
+
+  display: inline-table;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.PictureCard {
+  width: 60%;
+  height: 100px;
+}
+
+.UsercardButton {
+  height: 180px;
+  margin: 2% 2%;
+  margin-left: 1%;
+
+  display: inline-table;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 30%;
+  background-color: rgba(109, 131, 137, 0.61);
+}

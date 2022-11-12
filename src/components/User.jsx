@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LoginForm from "./LoginForm";
+import React, { useContext } from "react";
+import Context from "./Context";
 
 const User = (props) => {
   const { user, setUser } = props;
-  console.log(user);
+  //   console.log(user);
   const adminUser = {
     nickName: "grumpy19",
     password: "grumpy19",
@@ -11,8 +13,10 @@ const User = (props) => {
   //   const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
 
+  const value = useContext(Context);
+
   const Login = (details) => {
-    console.log(details);
+    // console.log(details);
     if (
       details.nickName == adminUser.nickName &&
       details.password == adminUser.password
@@ -22,15 +26,13 @@ const User = (props) => {
         nickName: details.nickName,
         name: details.name,
       });
-    } else {
-      console.log("Details do not match!");
-      setError("Details do not match!");
     }
   };
 
   const Logout = () => {
     console.log("Logout");
     setUser({ nickName: "", name: "" });
+    // value.setIsDelete(false);
   };
 
   return (
@@ -38,7 +40,7 @@ const User = (props) => {
       {user.nickName != "" ? (
         <div className="welcome">
           <h3>
-            Welcome, <span>{user.nickName}</span>
+            Welcome, <span>{value.user.nickName}</span>
           </h3>
           <button onClick={Logout}>Logout</button>
         </div>
