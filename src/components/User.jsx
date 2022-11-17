@@ -32,7 +32,7 @@ const User = (props) => {
   const Logout = () => {
     console.log("Logout");
     setUser({ nickName: "", name: "" });
-    // value.setIsDelete(false);
+    value.setIsDelete(false);
   };
 
   return (

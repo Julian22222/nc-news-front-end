@@ -9,17 +9,17 @@ const UserCard = (props) => {
 
   const handleUser = (event) => {
     event.preventDefault();
-    value.setIsDelete(true);
+    value.setIsDelete(true); //assign delete btn only for those
     // console.log(value.isDelete);
+    value.setUser(showAllUsers.username); //assign user to the name that we click
 
-    // console.log(event);
-    // if (details.nickName === value.user.nickName) {
-    //   return value.setIsDelete(true);
-    // } else {
-    //   return value.setIsDelete(false);
-    // }
-    // setUser(showAllUsers.username);
-    // console.log(details);
+    console.log(event);
+    if (details.nickName === value.user.nickName) {
+      return value.setIsDelete(true);
+    } else {
+      return value.setIsDelete(false);
+    }
+    console.log(details);
   };
 
   return (
