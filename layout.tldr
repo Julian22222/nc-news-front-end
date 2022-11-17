@@ -60,7 +60,7 @@
             "parentId": "page",
             "childIndex": 3,
             "point": [
-              -211.67,
+              -209.53,
               -25.81
             ],
             "rotation": 0,
@@ -70,7 +70,7 @@
                 "id": "start",
                 "index": 0,
                 "point": [
-                  99.06,
+                  110.95,
                   0
                 ],
                 "canBind": true
@@ -89,7 +89,7 @@
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  49.53,
+                  55.48,
                   91.47
                 ]
               }
@@ -2209,6 +2209,28 @@
               "isFilled": false,
               "dash": "draw",
               "scale": 0.7704848595539198,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "8fd4bee6-eb98-4a98-2303-6957435046e6": {
+            "id": "8fd4bee6-eb98-4a98-2303-6957435046e6",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 79,
+            "point": [
+              278.5,
+              236
+            ],
+            "rotation": 0,
+            "text": "..",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
               "font": "script",
               "textAlign": "middle"
             }
