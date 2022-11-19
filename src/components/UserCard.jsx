@@ -1,8 +1,15 @@
 import React, { useContext } from "react";
+import { useEffect, useState } from "react";
 import Context from "./Context";
 // import User from "./User";
 
 const UserCard = (props) => {
+  const [logedUser, setLogedUser] = useState({});
+  // useEffect(() => {
+  //   console.log("useEffectS");
+  //   const user = logedUser;
+  // }, [logedUser]);
+
   const { showAllUsers, details } = props;
 
   const value = useContext(Context);
@@ -12,10 +19,12 @@ const UserCard = (props) => {
     event.preventDefault();
     // value.setIsDelete(true); //assign delete btn only for those
     // console.log(value.isDelete);
-    value.setCardUser(event.target.previousSibling); //assign user to the name that we click
+    setLogedUser({ name: event.target.previousSibling }); //assign user to the name that we click
     // console.log(showAllUsers); //all 6 users
     //
-    console.log(value.cardUser); //user nickName
+    // console.log(event.target.previousSibling, "Hello");
+    console.log("render");
+    console.log(logedUser); //user nickName
     // console.log(event.target.previousSibling); //username
 
     // showAllUsers.map((user) => {
@@ -30,13 +39,15 @@ const UserCard = (props) => {
     //login form name,nickname, password
   };
 
-  return (
+  return logedUser.name ? (
+    <h1>Welcome,{logedUser.name}</h1>
+  ) : (
     <ul>
       {showAllUsers.map((user) => {
         // console.log(user.username);
 
         return (
-          <button onClick={handleUser} className="UsercardButton">
+          <button onClick={(e) => handleUser(e)} className="UsercardButton">
             <li className="Usercard" key={user}>
               {user.username}
               <img

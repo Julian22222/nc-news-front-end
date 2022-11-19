@@ -39,15 +39,15 @@ function LoginForm({ Login, error }) {
       <div className="form-inner">
         {showLoginForm ? (
           <>
-            <form>
-              <UserCard
-                showAllUsers={showAllUsers}
-                setDetails={setDetails}
-                details={details}
-              />
-              {/*  */}
-              {error != "" ? <div className="error">{error}</div> : ""}
-              {/* <div className="from-group">
+            {/* <form> */}
+            <UserCard
+              showAllUsers={showAllUsers}
+              setDetails={setDetails}
+              details={details}
+            />
+            {/*  */}
+            {error != "" ? <div className="error">{error}</div> : ""}
+            {/* <div className="from-group">
                 <label htmlFor="name">nickName:</label>
                 <input
                   type="text"
@@ -59,7 +59,7 @@ function LoginForm({ Login, error }) {
                   value={details.nickName}
                 />
               </div> */}
-              {/* <div className="from-group">
+            {/* <div className="from-group">
                 <label htmlFor="name">Name:</label>
                 <input
                   type="text"
@@ -71,7 +71,7 @@ function LoginForm({ Login, error }) {
                   value={details.name}
                 />
               </div>{" "} */}
-              {/* <div className="form-group">
+            {/* <div className="form-group">
                 <label htmlFor="password">Password: </label>
                 <input
                   type="password"
@@ -83,7 +83,7 @@ function LoginForm({ Login, error }) {
                   value={details.password}
                 />
               </div> */}
-            </form>
+            {/* </form> */}
           </>
         ) : null}
 
