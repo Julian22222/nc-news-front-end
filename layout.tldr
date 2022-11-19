@@ -2406,28 +2406,6 @@
               "textAlign": "middle"
             }
           },
-          "cdee79bb-6deb-4bd0-13b8-e5ca5e465e3f": {
-            "id": "cdee79bb-6deb-4bd0-13b8-e5ca5e465e3f",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 95,
-            "point": [
-              -592.94,
-              -365.41
-            ],
-            "rotation": 0,
-            "text": "when empty comment it is updating the page",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
           "14ae518a-2ba7-4339-3d26-ac1cd2358f71": {
             "id": "14ae518a-2ba7-4339-3d26-ac1cd2358f71",
             "type": "arrow",
@@ -2513,11 +2491,11 @@
             "parentId": "page",
             "childIndex": 98,
             "point": [
-              -591.67,
-              -296.8
+              -600.17,
+              -367.28
             ],
             "rotation": 0,
-            "text": "logIn -click on card, get certain nickName",
+            "text": "logIn -click on card, login by that nickName",
             "style": {
               "color": "black",
               "size": "small",
@@ -2772,18 +2750,18 @@
               "textAlign": "middle"
             }
           },
-          "41fadb7a-ef93-4eb5-2117-e784f21a6d5b": {
-            "id": "41fadb7a-ef93-4eb5-2117-e784f21a6d5b",
+          "da57efb7-0243-46c0-38c2-bac725921486": {
+            "id": "da57efb7-0243-46c0-38c2-bac725921486",
             "type": "text",
             "name": "Text",
             "parentId": "page",
             "childIndex": 109,
             "point": [
-              462.6,
-              212.4
+              -597.98,
+              -406.92
             ],
             "rotation": 0,
-            "text": "...",
+            "text": "The post to the BE may take some time. How can you ensure the the user doesn't try and post the comment again?",
             "style": {
               "color": "black",
               "size": "small",

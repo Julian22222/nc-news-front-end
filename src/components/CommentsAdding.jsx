@@ -10,16 +10,21 @@ const CommentsAdding = (props) => {
     article_id,
     commentIncrementCounter,
     setCommentIncrementCounter,
+    setCommentsIsLoading,
+    commentsIsLoading,
   } = props;
 
   const value = useContext(Context);
   //   console.log(value.user.nickName);
 
-  const [commentsIsLoading, setCommentsIsLoading] = useState(true);
+  // const [commentsIsLoading, setCommentsIsLoading] = useState(false);
+  //show message comment is loading
+  //
   //   const [emptyCOmment, setEmptyComment] = useState(true);
 
   const handleAddaComment = (event) => {
-    console.log(event);
+    // console.log(event);
+    setCommentsIsLoading(true);
     event.preventDefault();
     setLeaveComment(input);
 
@@ -36,14 +41,15 @@ const CommentsAdding = (props) => {
         },
       }
     ).then((response) => response.json());
-    // setCommentsIsLoading(false);
+    setCommentsIsLoading(false);
   };
 
+  // if (commentsIsLoading) return <h2>Comment is uploading ...</h2>;
+
   return (
-    //when empty comment it is updating the page ???
     <>
       {input === "" ? (
-        <button disabled={handleAddaComment}>submit</button>
+        <button disabled>submit</button>
       ) : (
         <button onClick={handleAddaComment}>submit</button>
       )}

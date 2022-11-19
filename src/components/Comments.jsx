@@ -14,7 +14,10 @@ const Comments = (props) => {
   } = props;
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [commentsIsLoading, setCommentsIsLoading] = useState(false);
+  //show message comment is loading
   const [isRendering, setIsRendering] = useState(false);
+  //isRendering show comments form
   const [leaveComment, setLeaveComment] = useState([]);
   const [input, SetInput] = useState("");
 
@@ -44,7 +47,6 @@ const Comments = (props) => {
         user={user}
         setUser={setUser}
       />
-
       {isRendering ? (
         <>
           <form>
@@ -62,10 +64,13 @@ const Comments = (props) => {
               article_id={article_id}
               commentIncrementCounter={commentIncrementCounter}
               setCommentIncrementCounter={setCommentIncrementCounter}
+              commentsIsLoading={commentsIsLoading}
+              setCommentsIsLoading={setCommentsIsLoading}
             />
           </form>
         </>
       ) : null}
+      {commentsIsLoading ? <h2>Comment is uploading ...</h2> : null}
 
       <p>Comments:</p>
       <ul>
@@ -74,7 +79,10 @@ const Comments = (props) => {
             <li key={myComment.comment_id} className="articlecards">
               <p>Author: {myComment.author}</p>
               {myComment.body}
-              {value.isDelete ? <button>delete comment</button> : null}
+              {value.user ? <button>delete comment</button> : null}
+
+              {/* myComment.author===value.user -->correct*/}
+              {/* myComment.author === value.user.nickName  */}
             </li>
           );
         })}

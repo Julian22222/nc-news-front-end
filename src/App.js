@@ -10,8 +10,13 @@ import Context from "./components/Context";
 
 function App() {
   const [pleaselogin, setPleaseLogin] = useState(false);
+  //if pleaselogin(true)-> show message please login, when user wants to leave comment
   const [isDelete, setIsDelete] = useState(false);
+
   const [user, setUser] = useState({ nickName: "", name: "", password: "" });
+  //user for form password,nickname,name
+  const [cardUser, setCardUser] = useState({});
+  //user for cards
   const [sortBy, setSortBy] = useState();
 
   const value = {
@@ -21,6 +26,8 @@ function App() {
     setUser,
     setIsDelete,
     isDelete,
+    cardUser,
+    setCardUser,
   };
   //delete user from Individual article, change it to context
   return (

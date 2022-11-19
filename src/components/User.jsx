@@ -41,6 +41,7 @@ const User = (props) => {
         <div className="welcome">
           <h3>
             Welcome, <span>{value.user.nickName}</span>
+            {/* Welcome, <span>{value.cardUser}</span> */}
           </h3>
           <button onClick={Logout}>Logout</button>
         </div>
