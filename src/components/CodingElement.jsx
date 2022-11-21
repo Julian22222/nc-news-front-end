@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
 import { useParams } from "react-router-dom";
+import SortBar from "./SortBar";
 
-const CodingElement = () => {
+const CodingElement = (props) => {
+  const { setSortBy } = props;
+
   const [topicArticleList, setTopicArticleList] = useState([]);
 
   const { topic } = useParams();
@@ -19,6 +22,7 @@ const CodingElement = () => {
 
   return (
     <>
+      <SortBar />
       <ul>
         {topicArticleList.map((item) => {
           return (

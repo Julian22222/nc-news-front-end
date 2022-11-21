@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
+import SortBar from "./SortBar";
 
-const Homepage = () => {
+const Homepage = (props) => {
+  const { sortBy, setSortBy } = props;
+
   const [articleList, setArticleList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,8 +21,23 @@ const Homepage = () => {
 
   if (isLoading) return <h2>Loading ...</h2>;
 
+  // if (sortBy === "") {
+  //   return articleList;
+  // }
+
+  if (sortBy === "title") {
+    articleList.sort((a, b) => {
+      return a[sortBy] > b[sortBy] ? 1 : -1;
+    });
+  } else {
+    articleList.sort((a, b) => {
+      return a - b;
+    });
+  }
+
   return (
     <>
+      <SortBar setSortBy={setSortBy} />
       <ul>
         {articleList.map((article) => {
           return (

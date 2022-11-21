@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import CommentAddButton from "./CommentAddButton";
 import CommentsAdding from "./CommentsAdding";
+import React, { useContext } from "react";
+import Context from "./Context";
+import DeleteComment from "./DeleteComment";
 
 const Comments = (props) => {
-  //   console.log(props);
   const {
     article_id,
     user,
@@ -12,10 +14,16 @@ const Comments = (props) => {
     setCommentIncrementCounter,
   } = props;
   const [comments, setComments] = useState([]);
+  //all comments info
   const [isLoading, setIsLoading] = useState(true);
+  const [commentsIsLoading, setCommentsIsLoading] = useState(false);
+  //show message comment is loading
   const [isRendering, setIsRendering] = useState(false);
+  //isRendering show comments form
   const [leaveComment, setLeaveComment] = useState([]);
   const [input, SetInput] = useState("");
+
+  const value = useContext(Context);
 
   useEffect(() => {
     fetch(
@@ -27,9 +35,7 @@ const Comments = (props) => {
       });
     });
   }, [comments]);
-
-  //[article_id]
-
+  // console.log(comments);
   if (isLoading) return <h2>Loading ...</h2>;
 
   return (
@@ -41,7 +47,6 @@ const Comments = (props) => {
         user={user}
         setUser={setUser}
       />
-
       {isRendering ? (
         <>
           <form>
@@ -59,11 +64,13 @@ const Comments = (props) => {
               article_id={article_id}
               commentIncrementCounter={commentIncrementCounter}
               setCommentIncrementCounter={setCommentIncrementCounter}
+              commentsIsLoading={commentsIsLoading}
+              setCommentsIsLoading={setCommentsIsLoading}
             />
-            {/* <button onClick={handleAddaComment}>submit</button> */}
           </form>
         </>
       ) : null}
+      {commentsIsLoading ? <h2>Comment is uploading ...</h2> : null}
 
       <p>Comments:</p>
       <ul>
@@ -72,6 +79,9 @@ const Comments = (props) => {
             <li key={myComment.comment_id} className="articlecards">
               <p>Author: {myComment.author}</p>
               {myComment.body}
+              {value.cardUser === myComment.author ? (
+                <DeleteComment comments={comments} />
+              ) : null}
             </li>
           );
         })}

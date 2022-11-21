@@ -1,5 +1,6 @@
 import NavBarTopics from "./NavBarTopics";
 import User from "./User";
+
 const Header = (props) => {
   const { user, setUser } = props;
   return (

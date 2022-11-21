@@ -1,9 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LoginForm from "./LoginForm";
+import React, { useContext } from "react";
+import Context from "./Context";
 
 const User = (props) => {
+  const [showLoginBtn, setShowLoginBtn] = useState(true);
+
   const { user, setUser } = props;
-  console.log(user);
+  //   console.log(user);
   const adminUser = {
     nickName: "grumpy19",
     password: "grumpy19",
@@ -11,39 +15,42 @@ const User = (props) => {
   //   const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
 
+  const value = useContext(Context);
+
   const Login = (details) => {
-    console.log(details);
+    // console.log(details);
     if (
       details.nickName == adminUser.nickName &&
       details.password == adminUser.password
     ) {
-      console.log("logged In");
+      //   console.log("logged In");
       setUser({
         nickName: details.nickName,
         name: details.name,
       });
-    } else {
-      console.log("Details do not match!");
-      setError("Details do not match!");
     }
   };
 
   const Logout = () => {
-    console.log("Logout");
-    setUser({ nickName: "", name: "" });
+    value.setIsDelete(false);
+
+    setShowLoginBtn(true);
+    //login button to show
   };
 
   return (
     <>
-      {user.nickName != "" ? (
+      {value.cardUser != "" ? (
         <div className="welcome">
-          <h3>
-            Welcome, <span>{user.nickName}</span>
-          </h3>
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
-        <LoginForm Login={Login} error={error} />
+        <LoginForm
+          Login={Login}
+          error={error}
+          showLoginBtn={showLoginBtn}
+          setShowLoginBtn={setShowLoginBtn}
+        />
       )}
     </>
   );

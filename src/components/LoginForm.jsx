@@ -1,62 +1,57 @@
 import { useState, useEffect } from "react";
-import React from "react";
+import React, { useContext } from "react";
+import Context from "./Context";
+import UserCard from "./UserCard";
 
-function LoginForm({ Login, error }) {
-  const [details, setDetails] = useState({
-    nickName: "",
-    name: "",
-    password: "",
-  });
+function LoginForm({ Login, error, showLoginBtn, setShowLoginBtn }) {
+  const [showAllUsers, setShowAllUsers] = useState([]);
+  //
+  useEffect(() => {
+    fetch("https://nc-news-julian.herokuapp.com/api/users")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setShowAllUsers(data.users);
+        // setIsLoading(false);
+      });
+  }, []);
 
-  const hundleSubmit = (event) => {
+  // const [details, setDetails] = useState({
+  //   nickName: "",
+  //   // name: "",
+  //   password: "",
+  // });
+
+  const value = useContext(Context);
+  // const [showLoginBtn, setShowLoginBtn] = useState(true);
+  const [showLoginForm, setShowLoginForm] = useState(false);
+  //form card appear when click login
+
+  const handleLogin = (event) => {
     event.preventDefault();
-    Login(details);
+    // Login(details);
+    setShowLoginForm(true);
+    value.setPleaseLogin(false);
+    setShowLoginBtn(false);
   };
 
   return (
-    <form onSubmit={hundleSubmit}>
+    <form onSubmit={handleLogin}>
       <div className="form-inner">
-        <h4>Login</h4>
-        <p>Details: grumpy19</p>
-        {/* Eror */}
-        {error != "" ? <div className="error">{error}</div> : ""}
-        <div className="from-group">
-          <label htmlFor="name">nickName:</label>
-          <input
-            type="text"
-            name="nickName"
-            id="nickName"
-            onChange={(event) => {
-              setDetails({ ...details, nickName: event.target.value });
-            }}
-            value={details.nickName}
-          />
-        </div>
-        <div className="from-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            onChange={(event) => {
-              setDetails({ ...details, name: event.target.value });
-            }}
-            value={details.name}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password: </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            onChange={(event) => {
-              setDetails({ ...details, password: event.target.value });
-            }}
-            value={details.password}
-          />
-        </div>
-        <input type="submit" value="LOGIN" />
+        {showLoginForm ? (
+          <>
+            {/* <form> */}
+            <UserCard
+              showAllUsers={showAllUsers}
+              // setDetails={setDetails}
+              // details={details}
+            />
+
+            {error != "" ? <div className="error">{error}</div> : ""}
+          </>
+        ) : null}
+        {showLoginBtn ? <button onClick={handleLogin}>Login</button> : null}
       </div>
     </form>
   );
