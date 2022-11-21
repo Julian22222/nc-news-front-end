@@ -9,10 +9,8 @@ const CommentAddButton = (props) => {
 
   const value = useContext(Context);
 
-  const handleComment = (event) => {
-    event.preventDefault();
-
-    if (user.nickName !== "" && user.password !== "") {
+  const handleComment = () => {
+    if (value.cardUser !== false) {
       setIsRendering(true);
       value.setPleaseLogin(false);
     } else {

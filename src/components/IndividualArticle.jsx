@@ -24,7 +24,6 @@ const IndividualArticle = (props) => {
   }, [article_id]);
 
   if (isLoading) return <h2>Loading ...</h2>;
-
   return (
     <>
       <div className="card">

@@ -2190,56 +2190,6 @@
               "textAlign": "middle"
             }
           },
-          "f6276c8a-5115-44af-3a51-0dd8b9ae2c53": {
-            "id": "f6276c8a-5115-44af-3a51-0dd8b9ae2c53",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 82,
-            "point": [
-              -108.48,
-              655.51
-            ],
-            "rotation": 0,
-            "text": "when empty comments box ,click submit-->page is updating",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
-          "0f541e71-7446-4daa-1fc0-b8c76ac84d4c": {
-            "id": "0f541e71-7446-4daa-1fc0-b8c76ac84d4c",
-            "type": "rectangle",
-            "name": "Rectangle",
-            "parentId": "page",
-            "childIndex": 83,
-            "point": [
-              -117.71,
-              655.7
-            ],
-            "size": [
-              581.03,
-              47.89
-            ],
-            "rotation": 0,
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1
-            },
-            "label": "",
-            "labelPoint": [
-              0.5,
-              0.5
-            ]
-          },
           "99e7612f-fae2-4429-34ab-1e17fbf887fb": {
             "id": "99e7612f-fae2-4429-34ab-1e17fbf887fb",
             "type": "rectangle",
@@ -2474,28 +2424,6 @@
             ],
             "rotation": 0,
             "text": "UserCard",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
-          "f1992582-c095-426f-3015-f259109ab099": {
-            "id": "f1992582-c095-426f-3015-f259109ab099",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 98,
-            "point": [
-              -600.17,
-              -367.28
-            ],
-            "rotation": 0,
-            "text": "logIn -click on card, login by that nickName",
             "style": {
               "color": "black",
               "size": "small",
@@ -2768,6 +2696,128 @@
               "isFilled": false,
               "dash": "draw",
               "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "81e99b19-f020-4c3a-3ef6-b1346dd7b3d8": {
+            "id": "81e99b19-f020-4c3a-3ef6-b1346dd7b3d8",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 110,
+            "point": [
+              -592.66,
+              277.55
+            ],
+            "rotation": 0,
+            "text": "welcome - nickName",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "b0dd1024-e7ff-4a0a-0412-12b4c8af9200": {
+            "id": "b0dd1024-e7ff-4a0a-0412-12b4c8af9200",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 111,
+            "point": [
+              -594.28146329085,
+              -373.20809798695444
+            ],
+            "rotation": 0,
+            "text": "Welcome nickname ,when login",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "7febbdf3-9192-4491-332f-f0b5ebb44303": {
+            "id": "7febbdf3-9192-4491-332f-f0b5ebb44303",
+            "type": "arrow",
+            "name": "Arrow",
+            "parentId": "page",
+            "childIndex": 112,
+            "point": [
+              -426.34,
+              475.59
+            ],
+            "rotation": 0,
+            "bend": 0.00002496004386265203,
+            "handles": {
+              "start": {
+                "id": "start",
+                "index": 0,
+                "point": [
+                  200.19,
+                  0
+                ],
+                "canBind": true
+              },
+              "end": {
+                "id": "end",
+                "index": 1,
+                "point": [
+                  0,
+                  193.1
+                ],
+                "canBind": true
+              },
+              "bend": {
+                "id": "bend",
+                "index": 2,
+                "point": [
+                  100.1,
+                  96.55
+                ]
+              }
+            },
+            "decorations": {
+              "end": "arrow"
+            },
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "d75db13a-489e-4da8-1ced-a1e9fb9bc4bc": {
+            "id": "d75db13a-489e-4da8-1ced-a1e9fb9bc4bc",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 113,
+            "point": [
+              -572.64,
+              672.07
+            ],
+            "rotation": 0,
+            "text": "DeleteComment",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1.4420848576287817,
               "font": "script",
               "textAlign": "middle"
             }

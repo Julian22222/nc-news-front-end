@@ -20,12 +20,11 @@ const CommentsAdding = (props) => {
   // const [commentsIsLoading, setCommentsIsLoading] = useState(false);
   //show message comment is loading
   //
-  //   const [emptyCOmment, setEmptyComment] = useState(true);
 
   const handleAddaComment = (event) => {
+    event.preventDefault();
     // console.log(event);
     setCommentsIsLoading(true);
-    event.preventDefault();
     setLeaveComment(input);
 
     setCommentIncrementCounter((currentComments) => currentComments + 1);
@@ -35,7 +34,7 @@ const CommentsAdding = (props) => {
       `https://nc-news-julian.herokuapp.com/api/articles/${article_id}/comments`,
       {
         method: "POST",
-        body: JSON.stringify({ username: value.user.nickName, body: input }),
+        body: JSON.stringify({ username: value.cardUser, body: input }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },

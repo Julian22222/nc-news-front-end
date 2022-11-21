@@ -3,6 +3,7 @@ import CommentAddButton from "./CommentAddButton";
 import CommentsAdding from "./CommentsAdding";
 import React, { useContext } from "react";
 import Context from "./Context";
+import DeleteComment from "./DeleteComment";
 
 const Comments = (props) => {
   const {
@@ -13,6 +14,7 @@ const Comments = (props) => {
     setCommentIncrementCounter,
   } = props;
   const [comments, setComments] = useState([]);
+  //all comments info
   const [isLoading, setIsLoading] = useState(true);
   const [commentsIsLoading, setCommentsIsLoading] = useState(false);
   //show message comment is loading
@@ -33,9 +35,7 @@ const Comments = (props) => {
       });
     });
   }, [comments]);
-
-  //[article_id]
-
+  // console.log(comments);
   if (isLoading) return <h2>Loading ...</h2>;
 
   return (
@@ -79,10 +79,9 @@ const Comments = (props) => {
             <li key={myComment.comment_id} className="articlecards">
               <p>Author: {myComment.author}</p>
               {myComment.body}
-              {value.user ? <button>delete comment</button> : null}
-
-              {/* myComment.author===value.user -->correct*/}
-              {/* myComment.author === value.user.nickName  */}
+              {value.cardUser === myComment.author ? (
+                <DeleteComment comments={comments} />
+              ) : null}
             </li>
           );
         })}

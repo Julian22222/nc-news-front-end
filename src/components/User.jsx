@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import Context from "./Context";
 
 const User = (props) => {
+  const [showLoginBtn, setShowLoginBtn] = useState(true);
+
   const { user, setUser } = props;
   //   console.log(user);
   const adminUser = {
@@ -30,23 +32,25 @@ const User = (props) => {
   };
 
   const Logout = () => {
-    console.log("Logout");
-    setUser({ nickName: "", name: "" });
     value.setIsDelete(false);
+
+    setShowLoginBtn(true);
+    //login button to show
   };
 
   return (
     <>
-      {user.nickName != "" ? (
+      {value.cardUser != "" ? (
         <div className="welcome">
-          <h3>
-            Welcome, <span>{value.user.nickName}</span>
-            {/* Welcome, <span>{value.cardUser}</span> */}
-          </h3>
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
-        <LoginForm Login={Login} error={error} />
+        <LoginForm
+          Login={Login}
+          error={error}
+          showLoginBtn={showLoginBtn}
+          setShowLoginBtn={setShowLoginBtn}
+        />
       )}
     </>
   );
