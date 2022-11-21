@@ -9,7 +9,7 @@ const ArticleLiker = (props) => {
     comment_count,
   } = props;
 
-  console.log(commentIncrementCounter);
+  // console.log(commentIncrementCounter);
 
   const [voteIncrementCounter, setVoteIncrementCounter] = useState(0);
   const [voteDecrementCounter, setVoteDecrementCounter] = useState(0);

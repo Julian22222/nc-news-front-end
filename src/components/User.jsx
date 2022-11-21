@@ -6,7 +6,7 @@ import Context from "./Context";
 const User = (props) => {
   const [showLoginBtn, setShowLoginBtn] = useState(true);
 
-  const { user, setUser } = props;
+  // const { user, setUser } = props;
   //   console.log(user);
   const adminUser = {
     nickName: "grumpy19",
@@ -24,7 +24,7 @@ const User = (props) => {
       details.password == adminUser.password
     ) {
       //   console.log("logged In");
-      setUser({
+      value.setUser({
         nickName: details.nickName,
         name: details.name,
       });
@@ -33,9 +33,8 @@ const User = (props) => {
 
   const Logout = () => {
     value.setIsDelete(false);
-
     setShowLoginBtn(true);
-    //login button to show
+    value.setCardUser("");
   };
 
   return (

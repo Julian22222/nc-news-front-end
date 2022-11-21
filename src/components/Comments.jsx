@@ -18,12 +18,16 @@ const Comments = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [commentsIsLoading, setCommentsIsLoading] = useState(false);
   //show message comment is loading
+  const [deleteCommentIsLoading, setDeleteCommentIsLoading] = useState(false);
+  //show msg comment is deleting, in poor connection
   const [isRendering, setIsRendering] = useState(false);
   //isRendering show comments form
   const [leaveComment, setLeaveComment] = useState([]);
+  //list of all comments
   const [input, SetInput] = useState("");
 
   const value = useContext(Context);
+  // console.log(comments);
 
   useEffect(() => {
     fetch(
@@ -35,7 +39,6 @@ const Comments = (props) => {
       });
     });
   }, [comments]);
-  // console.log(comments);
   if (isLoading) return <h2>Loading ...</h2>;
 
   return (
@@ -70,17 +73,25 @@ const Comments = (props) => {
           </form>
         </>
       ) : null}
-      {commentsIsLoading ? <h2>Comment is uploading ...</h2> : null}
-
+      {commentsIsLoading ? <p>Comment is uploading ...</p> : null}
+      {deleteCommentIsLoading ? <p>Your comment is deleting...</p> : null}
       <p>Comments:</p>
       <ul>
         {comments.map((myComment) => {
           return (
             <li key={myComment.comment_id} className="articlecards">
               <p>Author: {myComment.author}</p>
+              <p>
+                Posted on {myComment.created_at.slice(0, 10)} at{" "}
+                {myComment.created_at.slice(11, -8)}
+              </p>
               {myComment.body}
               {value.cardUser === myComment.author ? (
-                <DeleteComment comments={comments} />
+                <DeleteComment
+                  comments={comments}
+                  setDeleteCommentIsLoading={setDeleteCommentIsLoading}
+                  setComments={setComments}
+                />
               ) : null}
             </li>
           );

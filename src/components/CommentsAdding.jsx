@@ -17,10 +17,6 @@ const CommentsAdding = (props) => {
   const value = useContext(Context);
   //   console.log(value.user.nickName);
 
-  // const [commentsIsLoading, setCommentsIsLoading] = useState(false);
-  //show message comment is loading
-  //
-
   const handleAddaComment = (event) => {
     event.preventDefault();
     // console.log(event);
@@ -42,8 +38,6 @@ const CommentsAdding = (props) => {
     ).then((response) => response.json());
     setCommentsIsLoading(false);
   };
-
-  // if (commentsIsLoading) return <h2>Comment is uploading ...</h2>;
 
   return (
     <>
