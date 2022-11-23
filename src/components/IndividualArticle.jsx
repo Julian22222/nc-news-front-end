@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ArticleLiker from "./ArticleLiker";
 import Comments from "./Comments";
-import User from "./User";
+// import User from "./User";
 
 const IndividualArticle = (props) => {
   const { user, setUser } = props;
@@ -10,6 +10,8 @@ const IndividualArticle = (props) => {
   const [article, setArticle] = useState([]);
   const [commentIncrementCounter, setCommentIncrementCounter] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [seeAllComments, setSeeAllComments] = useState(false);
+  //see all comments when press a btn see all comments
   const { article_id } = useParams();
 
   useEffect(() => {
@@ -33,7 +35,7 @@ const IndividualArticle = (props) => {
         <p>Author: {article.author}</p>
         <p>Body: {article.body}</p>
         <p>
-          Date of post: {article.created_at.slice(0, 10)} at
+          Date of post: {article.created_at.slice(0, 10)} at{" "}
           {article.created_at.slice(11, -8)}
         </p>
 
@@ -43,6 +45,7 @@ const IndividualArticle = (props) => {
           comment_count={article.comment_count}
           commentIncrementCounter={commentIncrementCounter}
           setCommentIncrementCounter={setCommentIncrementCounter}
+          setSeeAllComments={setSeeAllComments}
         />
         <Comments
           article_id={article.article_id}
@@ -50,6 +53,7 @@ const IndividualArticle = (props) => {
           setUser={setUser}
           commentIncrementCounter={commentIncrementCounter}
           setCommentIncrementCounter={setCommentIncrementCounter}
+          seeAllComments={seeAllComments}
         />
       </div>
     </>

@@ -12,6 +12,7 @@ const Comments = (props) => {
     setUser,
     commentIncrementCounter,
     setCommentIncrementCounter,
+    seeAllComments,
   } = props;
   const [comments, setComments] = useState([]);
   //all comments info
@@ -82,6 +83,7 @@ const Comments = (props) => {
       {deleteCommentIsLoading ? <p>Your comment is deleting...</p> : null}
       {commentIsDeleted ? <p>Your comment has been deleted!</p> : null}
       {comentIsPosted ? <p>Your comment has been posted!</p> : null}
+
       <p>Comments:</p>
       <ul>
         {comments.map((myComment) => {
