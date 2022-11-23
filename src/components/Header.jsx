@@ -1,12 +1,16 @@
 import NavBarTopics from "./NavBarTopics";
 import User from "./User";
 
-const Header = (props) => {
-  const { user, setUser } = props;
+const Header = () => {
   return (
     <>
-      <h1>NC News</h1>
-      <User user={user} setUser={setUser} />
+      <img
+        src="https://www.pngall.com/wp-content/uploads/2016/05/Newspaper-PNG-Clipart.png"
+        alt="News logo"
+        className="NClogo"
+      />
+      <h1 className="NCheader">NC News</h1>
+      <User />
       <NavBarTopics />
     </>
   );

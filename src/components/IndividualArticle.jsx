@@ -32,7 +32,11 @@ const IndividualArticle = (props) => {
         <p>Topic: {article.topic}</p>
         <p>Author: {article.author}</p>
         <p>Body: {article.body}</p>
-        <p>Date of post:{article.created_at}</p>
+        <p>
+          Date of post: {article.created_at.slice(0, 10)} at
+          {article.created_at.slice(11, -8)}
+        </p>
+
         <ArticleLiker
           votes={article.votes}
           article_id={article.article_id}

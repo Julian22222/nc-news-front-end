@@ -2319,8 +2319,8 @@
             "parentId": "page",
             "childIndex": 93,
             "point": [
-              -589.8,
-              -334.1
+              895.23,
+              -449.78
             ],
             "rotation": 0,
             "text": "each topic should sortBy-->CodingElement.jsx",
@@ -2678,28 +2678,6 @@
               "textAlign": "middle"
             }
           },
-          "da57efb7-0243-46c0-38c2-bac725921486": {
-            "id": "da57efb7-0243-46c0-38c2-bac725921486",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 109,
-            "point": [
-              -597.98,
-              -406.92
-            ],
-            "rotation": 0,
-            "text": "The post to the BE may take some time. How can you ensure the the user doesn't try and post the comment again?",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
           "81e99b19-f020-4c3a-3ef6-b1346dd7b3d8": {
             "id": "81e99b19-f020-4c3a-3ef6-b1346dd7b3d8",
             "type": "text",
@@ -2729,8 +2707,8 @@
             "parentId": "page",
             "childIndex": 111,
             "point": [
-              -594.28146329085,
-              -373.20809798695444
+              900.35,
+              -546.96
             ],
             "rotation": 0,
             "text": "Welcome nickname ,when login",
@@ -2822,18 +2800,18 @@
               "textAlign": "middle"
             }
           },
-          "8fd4bee6-eb98-4a98-2303-6957435046e6": {
-            "id": "8fd4bee6-eb98-4a98-2303-6957435046e6",
+          "6d656052-52ac-46c5-2828-389c47732821": {
+            "id": "6d656052-52ac-46c5-2828-389c47732821",
             "type": "text",
             "name": "Text",
             "parentId": "page",
-            "childIndex": 79,
+            "childIndex": 115,
             "point": [
-              278.5,
-              236
+              869.72,
+              -726.99
             ],
             "rotation": 0,
-            "text": "..",
+            "text": "delete comment  -->msg- comment has been deleted ,  comment is deleting... - in poor internet connection",
             "style": {
               "color": "black",
               "size": "small",
@@ -2844,15 +2822,85 @@
               "textAlign": "middle"
             }
           },
-          "b3fabc0f-ff67-423a-095d-ae96b5374e22": {
-            "id": "b3fabc0f-ff67-423a-095d-ae96b5374e22",
-            "type": "draw",
-            "name": "Draw",
+          "c2163e9b-6082-4331-1e0e-431cb5f540d8": {
+            "id": "c2163e9b-6082-4331-1e0e-431cb5f540d8",
+            "type": "text",
+            "name": "Text",
             "parentId": "page",
-            "childIndex": 80,
+            "childIndex": 116,
             "point": [
-              329.5,
-              301
+              873.58,
+              -766.77
+            ],
+            "rotation": 0,
+            "text": "post comment -> comment is posting..., in poor internet connection,",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "f07554ac-2c17-44c8-0353-5176afd8fb11": {
+            "id": "f07554ac-2c17-44c8-0353-5176afd8fb11",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 117,
+            "point": [
+              899.93,
+              -399.17
+            ],
+            "rotation": 0,
+            "text": "errors handling",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "7602910d-9f20-4419-0bea-839f5fa0a02a": {
+            "id": "7602910d-9f20-4419-0bea-839f5fa0a02a",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 120,
+            "point": [
+              731.12,
+              -744.83
+            ],
+            "rotation": 0,
+            "text": "Comments",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "063afa24-7c5c-43d1-0a68-cd6566d7ca91": {
+            "id": "063afa24-7c5c-43d1-0a68-cd6566d7ca91",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "page",
+            "childIndex": 121,
+            "point": [
+              666.9,
+              -754.17
+            ],
+            "size": [
+              204,
+              59.07
             ],
             "rotation": 0,
             "style": {
@@ -2862,19 +2910,105 @@
               "dash": "draw",
               "scale": 1
             },
-            "points": [
-              [
-                0,
-                0,
-                0.5
-              ],
-              [
-                0,
-                0,
-                0.5
-              ]
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "c979c119-6556-4e12-309a-6ea1a8d7da01": {
+            "id": "c979c119-6556-4e12-309a-6ea1a8d7da01",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 122,
+            "point": [
+              748.63,
+              -563.02
             ],
-            "isComplete": true
+            "rotation": 0,
+            "text": "UserCard",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "bf24d341-7972-489e-0140-7f412172fe2f": {
+            "id": "bf24d341-7972-489e-0140-7f412172fe2f",
+            "type": "rectangle",
+            "name": "Rectangle",
+            "parentId": "page",
+            "childIndex": 123,
+            "point": [
+              681.75,
+              -558.48
+            ],
+            "size": [
+              200.35,
+              35.29
+            ],
+            "rotation": 0,
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1
+            },
+            "label": "",
+            "labelPoint": [
+              0.5,
+              0.5
+            ]
+          },
+          "9c6beb9a-2626-4912-2a9f-1fe230e82957": {
+            "id": "9c6beb9a-2626-4912-2a9f-1fe230e82957",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 124,
+            "point": [
+              892.95,
+              -364.98
+            ],
+            "rotation": 0,
+            "text": "in each article have a button --> View All Comments -button , to open all comments",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "441966a6-0b30-48f3-17f8-72d776cd26a6": {
+            "id": "441966a6-0b30-48f3-17f8-72d776cd26a6",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 127,
+            "point": [
+              909.76,
+              -507.19
+            ],
+            "rotation": 0,
+            "text": "Your comment has been posted , your comment has been deleted  --> show all 2 msgs",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
           }
         },
         "bindings": {

@@ -17,12 +17,6 @@ function LoginForm({ Login, error, showLoginBtn, setShowLoginBtn }) {
       });
   }, []);
 
-  // const [details, setDetails] = useState({
-  //   nickName: "",
-  //   // name: "",
-  //   password: "",
-  // });
-
   const value = useContext(Context);
   // const [showLoginBtn, setShowLoginBtn] = useState(true);
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -41,12 +35,7 @@ function LoginForm({ Login, error, showLoginBtn, setShowLoginBtn }) {
       <div className="form-inner">
         {showLoginForm ? (
           <>
-            {/* <form> */}
-            <UserCard
-              showAllUsers={showAllUsers}
-              // setDetails={setDetails}
-              // details={details}
-            />
+            <UserCard showAllUsers={showAllUsers} />
 
             {error != "" ? <div className="error">{error}</div> : ""}
           </>

@@ -10,7 +10,7 @@ const CommentAddButton = (props) => {
   const value = useContext(Context);
 
   const handleComment = () => {
-    if (value.cardUser !== false) {
+    if (value.cardUser !== "") {
       setIsRendering(true);
       value.setPleaseLogin(false);
     } else {
@@ -21,7 +21,7 @@ const CommentAddButton = (props) => {
 
   return (
     <>
-      <button onClick={handleComment}>add a comment...</button>
+      <button onClick={handleComment}>Add A Comment</button>
       {value.pleaselogin ? <h4 className="pleaseLogin">Please LogIn</h4> : null}
     </>
   );

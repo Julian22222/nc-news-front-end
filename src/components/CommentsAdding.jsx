@@ -8,18 +8,14 @@ const CommentsAdding = (props) => {
     input,
     setLeaveComment,
     article_id,
-    commentIncrementCounter,
+    // commentIncrementCounter,
     setCommentIncrementCounter,
     setCommentsIsLoading,
-    commentsIsLoading,
+    setCommentIsPosted,
   } = props;
 
   const value = useContext(Context);
   //   console.log(value.user.nickName);
-
-  // const [commentsIsLoading, setCommentsIsLoading] = useState(false);
-  //show message comment is loading
-  //
 
   const handleAddaComment = (event) => {
     event.preventDefault();
@@ -41,9 +37,8 @@ const CommentsAdding = (props) => {
       }
     ).then((response) => response.json());
     setCommentsIsLoading(false);
+    setCommentIsPosted(true);
   };
-
-  // if (commentsIsLoading) return <h2>Comment is uploading ...</h2>;
 
   return (
     <>

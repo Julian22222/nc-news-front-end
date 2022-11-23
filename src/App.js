@@ -16,7 +16,7 @@ function App() {
   const [user, setUser] = useState({ nickName: "", name: "", password: "" });
   //user for form password,nickname,name
 
-  const [cardUser, setCardUser] = useState(false);
+  const [cardUser, setCardUser] = useState("");
 
   //user for cards
   const [sortBy, setSortBy] = useState();
