@@ -8,10 +8,10 @@ const CommentsAdding = (props) => {
     input,
     setLeaveComment,
     article_id,
-    commentIncrementCounter,
+    // commentIncrementCounter,
     setCommentIncrementCounter,
     setCommentsIsLoading,
-    commentsIsLoading,
+    setCommentIsPosted,
   } = props;
 
   const value = useContext(Context);
@@ -37,6 +37,7 @@ const CommentsAdding = (props) => {
       }
     ).then((response) => response.json());
     setCommentsIsLoading(false);
+    setCommentIsPosted(true);
   };
 
   return (

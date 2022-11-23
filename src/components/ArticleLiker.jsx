@@ -47,14 +47,23 @@ const ArticleLiker = (props) => {
         disabled={voteIncrementCounter !== 0}
         onClick={handleIncrementVote}
       >
-        Like this article
+        <img
+          src=" https://www.freeiconspng.com/thumbs/youtube-like-png/youtube-like-button-png-11.png"
+          className="LikeBtn"
+        />
+        Like
       </button>
       <button
         disabled={voteDecrementCounter !== 0}
         onClick={handleDecrementVote}
       >
-        Dislike this article
+        <img
+          src="https://www.freeiconspng.com/thumbs/youtube-dislike-png/black-and-white-youtube-dislike-png-icon-22.png"
+          className="LikeBtn"
+        />
+        Dislike
       </button>
+      <button>See All Comments</button>
     </>
   );
 };

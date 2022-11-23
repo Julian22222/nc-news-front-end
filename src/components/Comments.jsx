@@ -18,8 +18,12 @@ const Comments = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [commentsIsLoading, setCommentsIsLoading] = useState(false);
   //show message comment is loading
+  const [comentIsPosted, setCommentIsPosted] = useState(false);
+  //show msg when comment is posted
   const [deleteCommentIsLoading, setDeleteCommentIsLoading] = useState(false);
   //show msg comment is deleting, in poor connection
+  const [commentIsDeleted, setCommentIsDeleted] = useState(false);
+  //message to show when comment is deleted
   const [isRendering, setIsRendering] = useState(false);
   //isRendering show comments form
   const [leaveComment, setLeaveComment] = useState([]);
@@ -68,14 +72,16 @@ const Comments = (props) => {
               article_id={article_id}
               commentIncrementCounter={commentIncrementCounter}
               setCommentIncrementCounter={setCommentIncrementCounter}
-              commentsIsLoading={commentsIsLoading}
               setCommentsIsLoading={setCommentsIsLoading}
+              setCommentIsPosted={setCommentIsPosted}
             />
           </form>
         </>
       ) : null}
-      {commentsIsLoading ? <p>Comment is uploading ...</p> : null}
+      {commentsIsLoading ? <p>Your comment is posting...</p> : null}
       {deleteCommentIsLoading ? <p>Your comment is deleting...</p> : null}
+      {commentIsDeleted ? <p>Your comment has been deleted!</p> : null}
+      {comentIsPosted ? <p>Your comment has been posted!</p> : null}
       <p>Comments:</p>
       <ul>
         {comments.map((myComment) => {
@@ -92,6 +98,8 @@ const Comments = (props) => {
                   comment_id={myComment.comment_id}
                   setDeleteCommentIsLoading={setDeleteCommentIsLoading}
                   setComments={setComments}
+                  setCommentIsDeleted={setCommentIsDeleted}
+                  setCommentIncrementCounter={setCommentIncrementCounter}
                 />
               ) : null}
             </li>

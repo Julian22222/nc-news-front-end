@@ -9,7 +9,7 @@ const Header = () => {
         alt="News logo"
         className="NClogo"
       />
-      <h1>NC News</h1>
+      <h1 className="NCheader">NC News</h1>
       <User />
       <NavBarTopics />
     </>

@@ -2319,8 +2319,8 @@
             "parentId": "page",
             "childIndex": 93,
             "point": [
-              882.43,
-              -306.67
+              895.23,
+              -449.78
             ],
             "rotation": 0,
             "text": "each topic should sortBy-->CodingElement.jsx",
@@ -2678,28 +2678,6 @@
               "textAlign": "middle"
             }
           },
-          "da57efb7-0243-46c0-38c2-bac725921486": {
-            "id": "da57efb7-0243-46c0-38c2-bac725921486",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 109,
-            "point": [
-              887.97,
-              -400.52
-            ],
-            "rotation": 0,
-            "text": "The post to the BE may take some time. How can you ensure the the user doesn't try and post the comment again?",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
           "81e99b19-f020-4c3a-3ef6-b1346dd7b3d8": {
             "id": "81e99b19-f020-4c3a-3ef6-b1346dd7b3d8",
             "type": "text",
@@ -2729,8 +2707,8 @@
             "parentId": "page",
             "childIndex": 111,
             "point": [
-              889.38,
-              -447.74
+              900.35,
+              -546.96
             ],
             "rotation": 0,
             "text": "Welcome nickname ,when login",
@@ -2822,28 +2800,6 @@
               "textAlign": "middle"
             }
           },
-          "75134598-a1c1-4367-3b50-dd1566e82a49": {
-            "id": "75134598-a1c1-4367-3b50-dd1566e82a49",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 114,
-            "point": [
-              882.3,
-              -352.78
-            ],
-            "rotation": 0,
-            "text": "when posting comments should show -posting ",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
           "6d656052-52ac-46c5-2828-389c47732821": {
             "id": "6d656052-52ac-46c5-2828-389c47732821",
             "type": "text",
@@ -2851,11 +2807,11 @@
             "parentId": "page",
             "childIndex": 115,
             "point": [
-              891.34,
-              -261.09
+              869.72,
+              -726.99
             ],
             "rotation": 0,
-            "text": "delete comment  -->msg- comment has been deleted ,  comment is deleting - in poor internet connection",
+            "text": "delete comment  -->msg- comment has been deleted ,  comment is deleting... - in poor internet connection",
             "style": {
               "color": "black",
               "size": "small",
@@ -2873,8 +2829,8 @@
             "parentId": "page",
             "childIndex": 116,
             "point": [
-              890.04,
-              -501.13
+              873.58,
+              -766.77
             ],
             "rotation": 0,
             "text": "post comment -> comment is posting..., in poor internet connection,",
@@ -2895,8 +2851,8 @@
             "parentId": "page",
             "childIndex": 117,
             "point": [
-              888.95,
-              -214.91
+              899.93,
+              -399.17
             ],
             "rotation": 0,
             "text": "errors handling",
@@ -2918,7 +2874,7 @@
             "childIndex": 120,
             "point": [
               731.12,
-              -517.13
+              -744.83
             ],
             "rotation": 0,
             "text": "Comments",
@@ -2939,8 +2895,8 @@
             "parentId": "page",
             "childIndex": 121,
             "point": [
-              677.88,
-              -521.44
+              666.9,
+              -754.17
             ],
             "size": [
               204,
@@ -2967,8 +2923,8 @@
             "parentId": "page",
             "childIndex": 122,
             "point": [
-              726.68,
-              -445.52
+              748.63,
+              -563.02
             ],
             "rotation": 0,
             "text": "UserCard",
@@ -2989,8 +2945,8 @@
             "parentId": "page",
             "childIndex": 123,
             "point": [
-              676.26,
-              -448.29
+              681.75,
+              -558.48
             ],
             "size": [
               200.35,
@@ -3017,11 +2973,33 @@
             "parentId": "page",
             "childIndex": 124,
             "point": [
-              869.45,
-              -172.95
+              892.95,
+              -364.98
             ],
             "rotation": 0,
-            "text": " View All Comments -button ",
+            "text": "in each article have a button --> View All Comments -button , to open all comments",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "441966a6-0b30-48f3-17f8-72d776cd26a6": {
+            "id": "441966a6-0b30-48f3-17f8-72d776cd26a6",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 127,
+            "point": [
+              909.76,
+              -507.19
+            ],
+            "rotation": 0,
+            "text": "Your comment has been posted , your comment has been deleted  --> show all 2 msgs",
             "style": {
               "color": "black",
               "size": "small",

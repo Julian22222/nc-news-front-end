@@ -104,4 +104,24 @@
   background: transparent;
   width: 120px;
   display: flex;
+  margin-left: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.NCheader {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.LikeBtn {
+  background: transparent;
+  width: 10px;
+  margin-right: 3px;
 }

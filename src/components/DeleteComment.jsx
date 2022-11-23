@@ -4,14 +4,19 @@ export default function DeleteComment(props) {
   //   const [err, setErr] = useState(null);
   //   const [isLoading, setIsLoading] = useState(null);
 
-  const { comment_id, setDeleteCommentIsLoading, setComments } = props;
+  const {
+    comment_id,
+    setDeleteCommentIsLoading,
+    setComments,
+    setCommentIsDeleted,
+    setCommentIncrementCounter,
+  } = props;
 
   const handleDelete = () => {
     setDeleteCommentIsLoading(true);
-
-    // setDeletedComment(null);
+    setCommentIsDeleted(false);
     // setErr(null);
-    // setIsLoading(true);
+    setCommentIncrementCounter((currentComments) => currentComments - 1);
 
     fetch(`https://nc-news-julian.herokuapp.com/api/comments/${comment_id}`, {
       method: "DELETE",
@@ -19,12 +24,13 @@ export default function DeleteComment(props) {
         "Content-type": "application/json",
       },
     }).then((response) => {
-      //   setDeleteCommentIsLoading(false);
       alert("Your comment has been deleted!");
     });
     // .catch((err) => {
     //   setErr("Your comment request has failed. Please try again");
     // });
+    setDeleteCommentIsLoading(false);
+    setCommentIsDeleted(true);
   };
 
   return <button onClick={handleDelete}>DeleteComment</button>;
