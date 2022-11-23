@@ -13,7 +13,7 @@ function App() {
   //if pleaselogin(true)-> show message please login, when user wants to leave comment
   const [isDelete, setIsDelete] = useState(false);
 
-  const [user, setUser] = useState({ nickName: "", name: "", password: "" });
+  // const [user, setUser] = useState({ nickName: "", name: "", password: "" });
   //user for form password,nickname,name
 
   const [cardUser, setCardUser] = useState("");
@@ -24,8 +24,8 @@ function App() {
   const value = {
     pleaselogin,
     setPleaseLogin,
-    user,
-    setUser,
+    // user,
+    // setUser,
     setIsDelete,
     isDelete,
     cardUser,
@@ -36,7 +36,7 @@ function App() {
     <BrowserRouter>
       <Context.Provider value={value}>
         <div className="App">
-          <Header user={user} setUser={setUser} setSortBy={setSortBy} />
+          <Header setSortBy={setSortBy} />
           <Routes>
             <Route
               path="/"
@@ -48,7 +48,7 @@ function App() {
             />
             <Route
               path="/articles/:article_id"
-              element={<IndividualArticle user={user} setUser={setUser} />}
+              element={<IndividualArticle />}
             />
           </Routes>
         </div>

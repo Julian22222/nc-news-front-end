@@ -1,13 +1,7 @@
 import { useState } from "react";
 
 const ArticleLiker = (props) => {
-  let {
-    votes,
-    article_id,
-    commentIncrementCounter,
-    setCommentIncrementCounter,
-    comment_count,
-  } = props;
+  let { votes, article_id, commentIncrementCounter, comment_count } = props;
 
   // console.log(commentIncrementCounter);
 
@@ -29,7 +23,7 @@ const ArticleLiker = (props) => {
   const handleDecrementVote = () => {
     setVoteDecrementCounter((currentLikes) => currentLikes - 1);
 
-    console.log(voteDecrementCounter);
+    // console.log(voteDecrementCounter);
     fetch(`https://nc-news-julian.herokuapp.com/api/articles/${article_id}`, {
       method: "PATCH",
       body: JSON.stringify({ inc_votes: -1 }),
@@ -63,7 +57,6 @@ const ArticleLiker = (props) => {
         />
         Dislike
       </button>
-      <button>See All Comments</button>
     </>
   );
 };

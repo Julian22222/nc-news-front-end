@@ -6,16 +6,15 @@ const UserCard = (props) => {
   const { showAllUsers } = props;
 
   const value = useContext(Context);
-  console.log(value);
+  // console.log(value);
 
   const handleUser = (event) => {
     event.preventDefault();
-    console.log(event.target.previousSibling.data);
+    // console.log(event.target.previousSibling.data);
     value.setCardUser(event.target.previousSibling.data); // dosn't assign
     // value.setIsDelete(true); //assign delete btn only for those
     // console.log(value.isDelete);
     // console.log(showAllUsers); //all 6 users
-    console.log(value.cardUser); ///not assignig
   };
 
   //////WELCOME DOSN't WORK
@@ -25,8 +24,12 @@ const UserCard = (props) => {
     <ul>
       {showAllUsers.map((user) => {
         return (
-          <button onClick={(e) => handleUser(e)} className="UsercardButton">
-            <li className="Usercard" key={value.cardUser + user}>
+          <button
+            onClick={(e) => handleUser(e)}
+            className="UsercardButton"
+            key={user.username}
+          >
+            <li className="Usercard" key={`${value.cardUser} ${user.username}`}>
               {user.username}
               <img
                 className="PictureCard"

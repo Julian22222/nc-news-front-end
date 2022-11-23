@@ -21,7 +21,7 @@ const SortBar = (props) => {
         <option value="votes">votes</option>
         <option value="commentCount">comment count</option>
       </select>
-      <lebel> Order: </lebel>
+      <span> Order: </span>
       <select onChange={handleOrder}>
         <option value="asc">ascending</option>
         <option value="desc">descending</option>

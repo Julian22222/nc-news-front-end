@@ -14,14 +14,15 @@ const NavBarTopics = () => {
       <strong> Topics: </strong>
       {myTopics.map((topic) => {
         return topic === "all" ? (
-          <li className="navBarTopics" key={topic}>
-            <Link to={`/`}> {topic}</Link>
+          <li className="navBarTopics" key={`${topic} ${value.cardUser}`}>
+            <Link to={`/`} key={`${topic}`}>
+              {" "}
+              {topic}
+            </Link>
           </li>
         ) : (
-          <Link to={`/${topic}`}>
-            <li className="navBarTopics" key={value.cardUser + topic}>
-              {topic}
-            </li>
+          <Link to={`/${topic}`} key={`${value.pleaselogin} ${topic}`}>
+            <li className="navBarTopics">{topic}</li>
           </Link>
         );
       })}
