@@ -99,3 +99,9 @@
   width: 30%;
   background-color: rgba(109, 131, 137, 0.61);
 }
+
+.NClogo {
+  background: transparent;
+  width: 120px;
+  display: flex;
+}

@@ -55,6 +55,7 @@ const Comments = (props) => {
           <form>
             <textarea
               className="mytextarea"
+              placeholder="leave you comment here"
               onChange={(event) => {
                 SetInput(event.target.value);
               }}
@@ -88,7 +89,7 @@ const Comments = (props) => {
               {myComment.body}
               {value.cardUser === myComment.author ? (
                 <DeleteComment
-                  comments={comments}
+                  comment_id={myComment.comment_id}
                   setDeleteCommentIsLoading={setDeleteCommentIsLoading}
                   setComments={setComments}
                 />

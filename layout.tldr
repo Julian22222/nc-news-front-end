@@ -3009,6 +3009,28 @@
               0.5,
               0.5
             ]
+          },
+          "9c6beb9a-2626-4912-2a9f-1fe230e82957": {
+            "id": "9c6beb9a-2626-4912-2a9f-1fe230e82957",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 124,
+            "point": [
+              869.45,
+              -172.95
+            ],
+            "rotation": 0,
+            "text": " View All Comments -button ",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
           }
         },
         "bindings": {

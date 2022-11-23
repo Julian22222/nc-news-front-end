@@ -35,6 +35,32 @@ const Homepage = (props) => {
     });
   }
 
+  //////
+  // {topComments.map(({ author, body, comment_id, created_at, votes }) => {
+  // key={`${comment_id} ${author}`}
+
+  //////////////////////////////////
+
+  // useEffect(() => {
+  //   if (sortBy === "created_at") {
+  //     if (order === "descending") {
+  //       setSortedArticles(
+  //         [...articles].sort((a, b) => b[sortBy].localeCompare(a[sortBy]))
+  //       );
+  //     }
+  //     if (order === "ascending") {
+  //       setSortedArticles(
+  //         [...articles].sort((a, b) => a[sortBy].localeCompare(b[sortBy]))
+  //       );
+  //     }
+  //   } else if (sortBy !== "created_at" && order === "descending") {
+  //     setSortedArticles([...articles].sort((a, b) => b[sortBy] - a[sortBy]));
+  //   } else {
+  //     setSortedArticles([...articles].sort((a, b) => a[sortBy] - b[sortBy]));
+  //   }
+  // }, [sortBy, order]);
+
+  /////////////////////////////////////
   return (
     <>
       <SortBar setSortBy={setSortBy} />
