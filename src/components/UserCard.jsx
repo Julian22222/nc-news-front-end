@@ -1,26 +1,22 @@
 import React, { useContext } from "react";
-import { useEffect, useState } from "react";
 import Context from "./Context";
 
 const UserCard = (props) => {
-  const { showAllUsers } = props;
+  const { showAllUsers, setShowWelcomeMsg } = props;
 
   const value = useContext(Context);
-  // console.log(value);
 
   const handleUser = (event) => {
     event.preventDefault();
+    console.log(event.target.previousSibling.textContent);
+    // console.log(event.target.previousSibling.wholeText);
     // console.log(event.target.previousSibling.data);
-    value.setCardUser(event.target.previousSibling.data); // dosn't assign
-    // value.setIsDelete(true); //assign delete btn only for those
-    // console.log(value.isDelete);
-    // console.log(showAllUsers); //all 6 users
+    value.setCardUser(event.target.previousSibling.textContent);
+    setShowWelcomeMsg(true);
+    //////WELCOME DOSN't WORK
   };
 
-  //////WELCOME DOSN't WORK
-  return value.cardUser !== "" ? (
-    <h4>Welcome,{value.cardUser}</h4>
-  ) : (
+  return value.cardUser == "" ? (
     <ul>
       {showAllUsers.map((user) => {
         return (
@@ -41,7 +37,7 @@ const UserCard = (props) => {
         );
       })}
     </ul>
-  );
+  ) : null;
 };
 
 export default UserCard;

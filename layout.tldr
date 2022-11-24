@@ -2268,8 +2268,8 @@
             "parentId": "page",
             "childIndex": 93,
             "point": [
-              895.23,
-              -449.78
+              900.85,
+              -508.81
             ],
             "rotation": 0,
             "text": "each topic should sortBy-->CodingElement.jsx",
@@ -2729,7 +2729,7 @@
             "childIndex": 117,
             "point": [
               899.93,
-              -399.17
+              -472.72
             ],
             "rotation": 0,
             "text": "errors handling",
@@ -2850,8 +2850,8 @@
             "parentId": "page",
             "childIndex": 124,
             "point": [
-              892.95,
-              -364.98
+              889.2,
+              -301.74
             ],
             "rotation": 0,
             "text": "in each article have a button --> View All Comments -button , to open all comments",
@@ -2872,8 +2872,8 @@
             "parentId": "page",
             "childIndex": 127,
             "point": [
-              909.76,
-              -507.19
+              889.14,
+              -351.19
             ],
             "rotation": 0,
             "text": "Your comment has been posted , your comment has been deleted  --> show all 2 msgs",
@@ -2905,6 +2905,72 @@
               "isFilled": false,
               "dash": "draw",
               "scale": 1.5133137713920695,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "0921215f-553c-4df9-2409-795587114d9f": {
+            "id": "0921215f-553c-4df9-2409-795587114d9f",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 129,
+            "point": [
+              322.8950017408488,
+              222.2893287919835
+            ],
+            "rotation": 0,
+            "text": "LoginForm --> logout btn",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "9bbec024-a272-4ee8-2031-75448c8bfca9": {
+            "id": "9bbec024-a272-4ee8-2031-75448c8bfca9",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 130,
+            "point": [
+              237.99243430434012,
+              306.6123289080401
+            ],
+            "rotation": 0,
+            "text": "logout btn -->user",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "d9cba7f1-d577-42d7-1853-38d329c07e35": {
+            "id": "d9cba7f1-d577-42d7-1853-38d329c07e35",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 131,
+            "point": [
+              19.189999999999998,
+              394.54
+            ],
+            "rotation": 0,
+            "text": "[showWelcomeMsg, setShowWelcomeMsg] = useState(false)---->login form",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
               "font": "script",
               "textAlign": "middle"
             }

@@ -17,7 +17,7 @@ function App() {
   //user for form password,nickname,name
 
   const [cardUser, setCardUser] = useState("");
-
+  console.log(cardUser);
   //user for cards
   const [sortBy, setSortBy] = useState();
 

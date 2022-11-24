@@ -5,7 +5,8 @@ import UserCard from "./UserCard";
 
 function LoginForm({ Login, error, showLoginBtn, setShowLoginBtn }) {
   const [showAllUsers, setShowAllUsers] = useState([]);
-  //
+  const [showWelcomeMsg, setShowWelcomeMsg] = useState(false);
+  //show msg welcome+ username
   useEffect(() => {
     fetch("https://nc-news-julian.herokuapp.com/api/users")
       .then((res) => {
@@ -29,18 +30,25 @@ function LoginForm({ Login, error, showLoginBtn, setShowLoginBtn }) {
     value.setPleaseLogin(false);
     setShowLoginBtn(false);
   };
+  console.log(showWelcomeMsg);
 
   return (
-    <form onSubmit={handleLogin}>
+    <form>
       <div className="form-inner">
         {showLoginForm ? (
           <>
-            <UserCard showAllUsers={showAllUsers} />
+            <UserCard
+              showAllUsers={showAllUsers}
+              setShowWelcomeMsg={setShowWelcomeMsg}
+              setShowLoginForm={setShowLoginForm}
+            />
 
             {error != "" ? <div className="error">{error}</div> : ""}
           </>
         ) : null}
         {showLoginBtn ? <button onClick={handleLogin}>Login</button> : null}
+        {!showWelcomeMsg ? <p>Welcome, unauthorised user!</p> : null}
+        {showWelcomeMsg ? <h4>Welcome,{value.cardUser}</h4> : null}
       </div>
     </form>
   );
