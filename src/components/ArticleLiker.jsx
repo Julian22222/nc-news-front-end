@@ -35,8 +35,10 @@ const ArticleLiker = (props) => {
 
   return (
     <>
-      <p>Comment count: {Number(comment_count) + commentIncrementCounter}</p>
-      <p>Votes: {votes + voteIncrementCounter + voteDecrementCounter}</p>
+      <div className="CommentsAndVotes">
+        <p>Comment count: {Number(comment_count) + commentIncrementCounter}</p>
+        <p>Votes: {votes + voteIncrementCounter + voteDecrementCounter}</p>
+      </div>
       <button
         disabled={voteIncrementCounter !== 0}
         onClick={handleIncrementVote}

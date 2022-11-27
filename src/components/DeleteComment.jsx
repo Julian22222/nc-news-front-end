@@ -33,5 +33,12 @@ export default function DeleteComment(props) {
     setCommentIsDeleted(true);
   };
 
-  return <button onClick={handleDelete}>DeleteComment</button>;
+  return (
+    <>
+      <br></br>
+      <button onClick={handleDelete} className="DeleteBtn">
+        DeleteComment
+      </button>
+    </>
+  );
 }

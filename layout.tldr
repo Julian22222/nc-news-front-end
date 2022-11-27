@@ -2268,8 +2268,8 @@
             "parentId": "page",
             "childIndex": 93,
             "point": [
-              895.23,
-              -449.78
+              883.99,
+              -571.12
             ],
             "rotation": 0,
             "text": "each topic should sortBy-->CodingElement.jsx",
@@ -2577,28 +2577,6 @@
               "textAlign": "middle"
             }
           },
-          "b0dd1024-e7ff-4a0a-0412-12b4c8af9200": {
-            "id": "b0dd1024-e7ff-4a0a-0412-12b4c8af9200",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 111,
-            "point": [
-              900.35,
-              -546.96
-            ],
-            "rotation": 0,
-            "text": "Welcome nickname ,when login",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
           "7febbdf3-9192-4491-332f-f0b5ebb44303": {
             "id": "7febbdf3-9192-4491-332f-f0b5ebb44303",
             "type": "arrow",
@@ -2728,8 +2706,8 @@
             "parentId": "page",
             "childIndex": 117,
             "point": [
-              899.93,
-              -399.17
+              881.19,
+              -531.28
             ],
             "rotation": 0,
             "text": "errors handling",
@@ -2793,56 +2771,6 @@
               0.5
             ]
           },
-          "c979c119-6556-4e12-309a-6ea1a8d7da01": {
-            "id": "c979c119-6556-4e12-309a-6ea1a8d7da01",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 122,
-            "point": [
-              748.63,
-              -563.02
-            ],
-            "rotation": 0,
-            "text": "UserCard",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
-          "bf24d341-7972-489e-0140-7f412172fe2f": {
-            "id": "bf24d341-7972-489e-0140-7f412172fe2f",
-            "type": "rectangle",
-            "name": "Rectangle",
-            "parentId": "page",
-            "childIndex": 123,
-            "point": [
-              681.75,
-              -558.48
-            ],
-            "size": [
-              200.35,
-              35.29
-            ],
-            "rotation": 0,
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1
-            },
-            "label": "",
-            "labelPoint": [
-              0.5,
-              0.5
-            ]
-          },
           "9c6beb9a-2626-4912-2a9f-1fe230e82957": {
             "id": "9c6beb9a-2626-4912-2a9f-1fe230e82957",
             "type": "text",
@@ -2850,8 +2778,8 @@
             "parentId": "page",
             "childIndex": 124,
             "point": [
-              892.95,
-              -364.98
+              889.2,
+              -301.74
             ],
             "rotation": 0,
             "text": "in each article have a button --> View All Comments -button , to open all comments",
@@ -2872,8 +2800,8 @@
             "parentId": "page",
             "childIndex": 127,
             "point": [
-              909.76,
-              -507.19
+              889.14,
+              -351.19
             ],
             "rotation": 0,
             "text": "Your comment has been posted , your comment has been deleted  --> show all 2 msgs",
@@ -2905,6 +2833,94 @@
               "isFilled": false,
               "dash": "draw",
               "scale": 1.5133137713920695,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "0921215f-553c-4df9-2409-795587114d9f": {
+            "id": "0921215f-553c-4df9-2409-795587114d9f",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 129,
+            "point": [
+              322.8950017408488,
+              222.2893287919835
+            ],
+            "rotation": 0,
+            "text": "LoginForm --> logout btn",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "9bbec024-a272-4ee8-2031-75448c8bfca9": {
+            "id": "9bbec024-a272-4ee8-2031-75448c8bfca9",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 130,
+            "point": [
+              237.99243430434012,
+              306.6123289080401
+            ],
+            "rotation": 0,
+            "text": "logout btn -->user",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "d9cba7f1-d577-42d7-1853-38d329c07e35": {
+            "id": "d9cba7f1-d577-42d7-1853-38d329c07e35",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 131,
+            "point": [
+              19.189999999999998,
+              394.54
+            ],
+            "rotation": 0,
+            "text": "[showWelcomeMsg, setShowWelcomeMsg] = useState(false)---->login form",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "fb828bdb-d361-4cc8-0405-a6f91a8cf238": {
+            "id": "fb828bdb-d361-4cc8-0405-a6f91a8cf238",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 132,
+            "point": [
+              270.15,
+              541.72
+            ],
+            "rotation": 0,
+            "text": "for logout -->  setShowWelcomeMsg(false)",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
               "font": "script",
               "textAlign": "middle"
             }

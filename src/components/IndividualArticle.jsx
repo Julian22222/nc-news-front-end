@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ArticleLiker from "./ArticleLiker";
 import Comments from "./Comments";
+import moment from "moment/moment";
 // import User from "./User";
 
 const IndividualArticle = (props) => {
   const { user, setUser } = props;
+
+  const date = moment(props.created_at).format("DD/MM/YYYY");
+  const time = moment(props.created_at).format("hh:mm A");
 
   const [article, setArticle] = useState([]);
   const [commentIncrementCounter, setCommentIncrementCounter] = useState(0);
@@ -29,16 +33,16 @@ const IndividualArticle = (props) => {
   return (
     <>
       <div className="card">
-        <p>Article Id: {article.article_id}</p>
-        <p>Title: {article.title}</p>
-        <p>Topic: {article.topic}</p>
-        <p>Author: {article.author}</p>
-        <p>Body: {article.body}</p>
-        <p>
-          Date of post: {article.created_at.slice(0, 10)} at{" "}
-          {article.created_at.slice(11, -8)}
-        </p>
-
+        <div className="EachArticle">
+          <p className="ArticleID">Article Id: {article.article_id}</p>
+          <p className="Title">Title: {article.title}</p>
+          <p className="Topic">Topic: {article.topic}</p>
+          <p className="Author">Author: {article.author}</p>
+          <p className="BodyOfEachArticle">Body: {article.body}</p>
+          <p className="DateofP">
+            Date of post: {date} at {time}
+          </p>
+        </div>
         <ArticleLiker
           votes={article.votes}
           article_id={article.article_id}

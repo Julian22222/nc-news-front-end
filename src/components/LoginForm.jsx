@@ -3,9 +3,17 @@ import React, { useContext } from "react";
 import Context from "./Context";
 import UserCard from "./UserCard";
 
-function LoginForm({ Login, error, showLoginBtn, setShowLoginBtn }) {
+function LoginForm({
+  Login,
+  error,
+  showLoginBtn,
+  setShowLoginBtn,
+  setShowWelcomeMsg,
+  showWelcomeMsg,
+}) {
   const [showAllUsers, setShowAllUsers] = useState([]);
-  //
+  // const [showWelcomeMsg, setShowWelcomeMsg] = useState(false);
+  //show msg welcome+ username
   useEffect(() => {
     fetch("https://nc-news-julian.herokuapp.com/api/users")
       .then((res) => {
@@ -31,16 +39,25 @@ function LoginForm({ Login, error, showLoginBtn, setShowLoginBtn }) {
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form>
       <div className="form-inner">
         {showLoginForm ? (
           <>
-            <UserCard showAllUsers={showAllUsers} />
+            <UserCard
+              showAllUsers={showAllUsers}
+              setShowWelcomeMsg={setShowWelcomeMsg}
+              setShowLoginForm={setShowLoginForm}
+            />
 
             {error != "" ? <div className="error">{error}</div> : ""}
           </>
         ) : null}
-        {showLoginBtn ? <button onClick={handleLogin}>Login</button> : null}
+        {showLoginBtn ? (
+          <button onClick={handleLogin} className="LoginBtn">
+            Login
+          </button>
+        ) : null}
+        {!showWelcomeMsg ? <p>Welcome, unauthorised user!</p> : null}
       </div>
     </form>
   );
