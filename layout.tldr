@@ -2268,8 +2268,8 @@
             "parentId": "page",
             "childIndex": 93,
             "point": [
-              900.85,
-              -508.81
+              883.99,
+              -571.12
             ],
             "rotation": 0,
             "text": "each topic should sortBy-->CodingElement.jsx",
@@ -2577,28 +2577,6 @@
               "textAlign": "middle"
             }
           },
-          "b0dd1024-e7ff-4a0a-0412-12b4c8af9200": {
-            "id": "b0dd1024-e7ff-4a0a-0412-12b4c8af9200",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 111,
-            "point": [
-              900.35,
-              -546.96
-            ],
-            "rotation": 0,
-            "text": "Welcome nickname ,when login",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
           "7febbdf3-9192-4491-332f-f0b5ebb44303": {
             "id": "7febbdf3-9192-4491-332f-f0b5ebb44303",
             "type": "arrow",
@@ -2728,8 +2706,8 @@
             "parentId": "page",
             "childIndex": 117,
             "point": [
-              899.93,
-              -472.72
+              881.19,
+              -531.28
             ],
             "rotation": 0,
             "text": "errors handling",
@@ -2778,56 +2756,6 @@
             "size": [
               204,
               59.07
-            ],
-            "rotation": 0,
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1
-            },
-            "label": "",
-            "labelPoint": [
-              0.5,
-              0.5
-            ]
-          },
-          "c979c119-6556-4e12-309a-6ea1a8d7da01": {
-            "id": "c979c119-6556-4e12-309a-6ea1a8d7da01",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 122,
-            "point": [
-              748.63,
-              -563.02
-            ],
-            "rotation": 0,
-            "text": "UserCard",
-            "style": {
-              "color": "black",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 1,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
-          "bf24d341-7972-489e-0140-7f412172fe2f": {
-            "id": "bf24d341-7972-489e-0140-7f412172fe2f",
-            "type": "rectangle",
-            "name": "Rectangle",
-            "parentId": "page",
-            "childIndex": 123,
-            "point": [
-              681.75,
-              -558.48
-            ],
-            "size": [
-              200.35,
-              35.29
             ],
             "rotation": 0,
             "style": {
@@ -2965,6 +2893,28 @@
             ],
             "rotation": 0,
             "text": "[showWelcomeMsg, setShowWelcomeMsg] = useState(false)---->login form",
+            "style": {
+              "color": "black",
+              "size": "small",
+              "isFilled": false,
+              "dash": "draw",
+              "scale": 1,
+              "font": "script",
+              "textAlign": "middle"
+            }
+          },
+          "fb828bdb-d361-4cc8-0405-a6f91a8cf238": {
+            "id": "fb828bdb-d361-4cc8-0405-a6f91a8cf238",
+            "type": "text",
+            "name": "Text",
+            "parentId": "page",
+            "childIndex": 132,
+            "point": [
+              270.15,
+              541.72
+            ],
+            "rotation": 0,
+            "text": "for logout -->  setShowWelcomeMsg(false)",
             "style": {
               "color": "black",
               "size": "small",

@@ -17,9 +17,10 @@ function App() {
   //user for form password,nickname,name
 
   const [cardUser, setCardUser] = useState("");
-  console.log(cardUser);
+
   //user for cards
-  const [sortBy, setSortBy] = useState();
+  const [sortBy, setSortBy] = useState("");
+  const [order, setOrder] = useState("asc");
 
   const value = {
     pleaselogin,
@@ -30,6 +31,10 @@ function App() {
     isDelete,
     cardUser,
     setCardUser,
+    sortBy,
+    setSortBy,
+    setOrder,
+    order,
   };
   //delete user from Individual article, change it to context
   return (

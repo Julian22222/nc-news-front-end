@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
+import Context from "./Context";
+import React, { useContext } from "react";
 import SortBar from "./SortBar";
 
-const Homepage = (props) => {
-  const { sortBy, setSortBy } = props;
+const Homepage = () => {
+  const value = useContext(Context);
 
   const [articleList, setArticleList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -19,21 +21,52 @@ const Homepage = (props) => {
       });
   }, [articleList]);
 
+  // console.log(articleList);
+
   if (isLoading) return <h2>Loading ...</h2>;
 
   // if (sortBy === "") {
   //   return articleList;
   // }
 
-  if (sortBy === "title") {
-    articleList.sort((a, b) => {
-      return a[sortBy] > b[sortBy] ? 1 : -1;
-    });
-  } else {
-    articleList.sort((a, b) => {
-      return a - b;
-    });
+  // if (value.sortBy === "commentCount" && value.order === "asc") {
+  //   articleList.map((element) =>
+  //     [...articleList].sort((a, b) => {
+  //       return b[element.comment_count] - a[element.comment_count];
+  //     })
+  //   );
+  // }
+
+  if (value.sortBy === "commentCount" && value.order === "asc") {
+    articleList.map((element) =>
+      [...articleList].sort((a, b) => {
+        const keyA = new Date(a[element.comment_count]);
+        const keyB = new Date(b[element.comment_count]);
+        if (keyA > keyB) return -1;
+        if (keyA < keyB) return 1;
+        return 0;
+      })
+    );
   }
+
+  // var keyA = new Date(a.updated_at),
+  //   keyB = new Date(b.updated_at);
+  // // Compare the 2 dates
+  // if (keyA > keyB) return -1;
+  // if (keyA < keyB) return 1;
+  // return 0;
+
+  ////////////////////////////////////////////////
+  // if (value.sortBy === "commentCount" && value.order === "asc") {
+  //   articleList.sort((a, b) => {
+  //     return a[value.sortBy] > b[value.sortBy] ? 1 : -1;
+  //   });
+  // }
+  // else {
+  //   articleList.sort((a, b) => {
+  //     return a - b;
+  //   });
+  // }
 
   //////
   // {topComments.map(({ author, body, comment_id, created_at, votes }) => {
@@ -41,29 +74,9 @@ const Homepage = (props) => {
 
   //////////////////////////////////
 
-  // useEffect(() => {
-  //   if (sortBy === "created_at") {
-  //     if (order === "descending") {
-  //       setSortedArticles(
-  //         [...articles].sort((a, b) => b[sortBy].localeCompare(a[sortBy]))
-  //       );
-  //     }
-  //     if (order === "ascending") {
-  //       setSortedArticles(
-  //         [...articles].sort((a, b) => a[sortBy].localeCompare(b[sortBy]))
-  //       );
-  //     }
-  //   } else if (sortBy !== "created_at" && order === "descending") {
-  //     setSortedArticles([...articles].sort((a, b) => b[sortBy] - a[sortBy]));
-  //   } else {
-  //     setSortedArticles([...articles].sort((a, b) => a[sortBy] - b[sortBy]));
-  //   }
-  // }, [sortBy, order]);
-
-  /////////////////////////////////////
   return (
     <>
-      <SortBar setSortBy={setSortBy} />
+      <SortBar setArticleList={setArticleList} articleList={articleList} />
       <ul>
         {articleList.map((article) => {
           return (

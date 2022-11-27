@@ -8,7 +8,7 @@ const UserCard = (props) => {
 
   const handleUser = (event) => {
     event.preventDefault();
-    console.log(event.target.previousSibling.textContent);
+
     // console.log(event.target.previousSibling.wholeText);
     // console.log(event.target.previousSibling.data);
     value.setCardUser(event.target.previousSibling.textContent);

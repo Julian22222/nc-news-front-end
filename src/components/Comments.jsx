@@ -88,9 +88,9 @@ const Comments = (props) => {
       <ul>
         {comments.map((myComment) => {
           return (
-            <li key={myComment.comment_id} className="articlecards">
-              <p>Author: {myComment.author}</p>
-              <p>
+            <li key={myComment.comment_id} className="EachCommentlecard">
+              <p className="AuthorComment">Author: {myComment.author}</p>
+              <p className="DateofComment">
                 Posted on {myComment.created_at.slice(0, 10)} at{" "}
                 {myComment.created_at.slice(11, -8)}
               </p>
