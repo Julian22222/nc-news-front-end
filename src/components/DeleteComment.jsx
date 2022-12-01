@@ -1,7 +1,7 @@
 import React from "react";
+import { useState } from "react";
 
 export default function DeleteComment(props) {
-  //   const [err, setErr] = useState(null);
   //   const [isLoading, setIsLoading] = useState(null);
 
   const {
@@ -12,10 +12,12 @@ export default function DeleteComment(props) {
     setCommentIncrementCounter,
   } = props;
 
+  const [err, setErr] = useState(null);
+
   const handleDelete = () => {
     setDeleteCommentIsLoading(true);
     setCommentIsDeleted(false);
-    // setErr(null);
+    setErr(null);
     setCommentIncrementCounter((currentComments) => currentComments - 1);
 
     fetch(`https://nc-news-julian.herokuapp.com/api/comments/${comment_id}`, {
@@ -26,12 +28,14 @@ export default function DeleteComment(props) {
     }).then((response) => {
       alert("Your comment has been deleted!");
     });
-    // .catch((err) => {
-    //   setErr("Your comment request has failed. Please try again");
-    // });
     setDeleteCommentIsLoading(false);
-    setCommentIsDeleted(true);
+    setCommentIsDeleted(true)
+ .catch((err) => {
+      setErr("Your comment request has failed. Please try again");
+    });
   };
+
+  if (err) <p>{err}</p>;
 
   return (
     <>

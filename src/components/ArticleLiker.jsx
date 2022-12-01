@@ -7,9 +7,11 @@ const ArticleLiker = (props) => {
 
   const [voteIncrementCounter, setVoteIncrementCounter] = useState(0);
   const [voteDecrementCounter, setVoteDecrementCounter] = useState(0);
+  const [err, setErr] = useState(null);
 
   const handleIncrementVote = () => {
     setVoteIncrementCounter((currentLikes) => currentLikes + 1);
+    setErr(null);
 
     fetch(`https://nc-news-julian.herokuapp.com/api/articles/${article_id}`, {
       method: "PATCH",
@@ -17,11 +19,12 @@ const ArticleLiker = (props) => {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
-    }).then((response) => response.json());
+    }).then((response) => response.json()).catch((err))
   };
 
   const handleDecrementVote = () => {
     setVoteDecrementCounter((currentLikes) => currentLikes - 1);
+    setErr(null);
 
     // console.log(voteDecrementCounter);
     fetch(`https://nc-news-julian.herokuapp.com/api/articles/${article_id}`, {
@@ -30,8 +33,13 @@ const ArticleLiker = (props) => {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
-    }).then((response) => response.json());
+    }).then((response) => response.json()).catch((err)=>{
+      setErr("Something went wrong");
+    })
   };
+
+  if (err) return <p>{err}</p>;
+
 
   return (
     <>

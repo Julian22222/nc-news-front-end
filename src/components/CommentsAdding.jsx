@@ -14,11 +14,14 @@ const CommentsAdding = (props) => {
     setCommentIsPosted,
   } = props;
 
+  const [err, setErr] = useState(null);
+
   const value = useContext(Context);
   //   console.log(value.user.nickName);
 
   const handleAddaComment = (event) => {
     event.preventDefault();
+    setErr(null);
     // console.log(event);
     setCommentsIsLoading(true);
     setLeaveComment(input);
@@ -37,8 +40,13 @@ const CommentsAdding = (props) => {
       }
     ).then((response) => response.json());
     setCommentsIsLoading(false);
-    setCommentIsPosted(true);
+    setCommentIsPosted(true)
+    .catch((err) => {
+      setErr("Your comment request timed out, please try again.");
+    });
   };
+
+  if (err) <p>{err}</p>;
 
   return (
     <>
