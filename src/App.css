@@ -112,20 +112,11 @@
 }
 
 .DateOfPost {
-  /* margin-left: -55%; */
-  /* margin-right: 10px; */
   color: rgb(94, 10, 102);
+  float: right;
+  margin-top: -70px;
+  margin-right: 5%;
 
-  position: absolute;
-  margin-left: 170px;
-  margin-top: -18%;
-
-  /* top: 10px;
-  left: 50%; */
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
 }
 
 .Author {
@@ -218,6 +209,9 @@
   top: 85px;
   right: 5%;
   background: rgb(49, 180, 105);
+  margin-right: 8%;
+  width: 10%;
+  height: 3%;
 }
 
 .SortingSortByandOrder {

@@ -36,17 +36,21 @@ const Homepage = () => {
   //     })
   //   );
   // }
+// console.log(articleList)
 
   if (value.sortBy === "commentCount" && value.order === "asc") {
-    articleList.map((element) =>
+    // articleList.map((element) =>
       [...articleList].sort((a, b) => {
-        const keyA = new Date(a[element.comment_count]);
-        const keyB = new Date(b[element.comment_count]);
-        if (keyA > keyB) return -1;
-        if (keyA < keyB) return 1;
+        // const keyA = new Date(a[element.comment_count]);
+        // const keyB = new Date(b[element.comment_count]);
+        // if (keyA > keyB) return -1;
+        // if (keyA < keyB) return 1;
+        if(a.comment_count>b.comment_count){
+          return 1
+        }
         return 0;
       })
-    );
+    // );
   }
 
   // var keyA = new Date(a.updated_at),

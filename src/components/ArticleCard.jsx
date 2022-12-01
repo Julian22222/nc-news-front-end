@@ -9,9 +9,9 @@ const ArticleCard = (props) => {
       <p className="ArticleID">Article Id: {props.article_id}</p>
       <p className="Title">Title: {props.title}</p>
       <p className="Topic">Topic: {props.topic}</p>
-      <p className="DateOfPost">
+      <strong className="DateOfPost">
         Date of post: <br></br> {date} <br></br> at {time}
-      </p>
+      </strong>
 
       <p>Votes: {props.votes}</p>
       <p>Comment count: {props.comment_count}</p>
