@@ -19,64 +19,43 @@ const Homepage = () => {
         setArticleList(data);
         setIsLoading(false);
       });
-  }, [articleList]);
+  }, [articleList,value.sortBy, value.order]);
 
   // console.log(articleList);
 
   if (isLoading) return <h2>Loading ...</h2>;
 
-  // if (sortBy === "") {
-  //   return articleList;
-  // }
-
-  // if (value.sortBy === "commentCount" && value.order === "asc") {
-  //   articleList.map((element) =>
-  //     [...articleList].sort((a, b) => {
-  //       return b[element.comment_count] - a[element.comment_count];
-  //     })
-  //   );
-  // }
-// console.log(articleList)
-
   if (value.sortBy === "commentCount" && value.order === "asc") {
-    // articleList.map((element) =>
-      [...articleList].sort((a, b) => {
-        // const keyA = new Date(a[element.comment_count]);
-        // const keyB = new Date(b[element.comment_count]);
-        // if (keyA > keyB) return -1;
-        // if (keyA < keyB) return 1;
-        if(a.comment_count>b.comment_count){
-          return 1
-        }
-        return 0;
+      articleList.sort((a, b) => {
+        return a.comment_count>b.comment_count ? -1 : 1
       })
-    // );
   }
 
-  // var keyA = new Date(a.updated_at),
-  //   keyB = new Date(b.updated_at);
-  // // Compare the 2 dates
-  // if (keyA > keyB) return -1;
-  // if (keyA < keyB) return 1;
-  // return 0;
+  if (value.sortBy === "commentCount" && value.order === "desc") {
+    articleList.sort((a, b) => {
+      return a.comment_count>b.comment_count ? 1 : -1
+    })}
 
-  ////////////////////////////////////////////////
-  // if (value.sortBy === "commentCount" && value.order === "asc") {
-  //   articleList.sort((a, b) => {
-  //     return a[value.sortBy] > b[value.sortBy] ? 1 : -1;
-  //   });
-  // }
-  // else {
-  //   articleList.sort((a, b) => {
-  //     return a - b;
-  //   });
-  // }
+    if (value.sortBy === "votes" && value.order === "asc") {
+      articleList.sort((a, b) => {
+        return a.votes>b.votes ? -1 : 1
+      })}
 
-  //////
-  // {topComments.map(({ author, body, comment_id, created_at, votes }) => {
-  // key={`${comment_id} ${author}`}
+      if (value.sortBy === "votes" && value.order === "desc") {
+        articleList.sort((a, b) => {
+          return a.votes>b.votes ? 1 : -1
+        })}
 
-  //////////////////////////////////
+        if (value.sortBy === "publishedDate" && value.order === "asc") {
+          articleList.sort((a, b) => {
+            return a.created_at>b.created_at ? -1 : 1
+          })}
+    
+          if (value.sortBy === "publishedDate" && value.order === "desc") {
+            articleList.sort((a, b) => {
+              return a.created_at>b.created_at ? 1 : -1
+            })}
+
 
   return (
     <>

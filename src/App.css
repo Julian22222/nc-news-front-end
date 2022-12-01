@@ -212,6 +212,8 @@
   margin-right: 8%;
   width: 10%;
   height: 3%;
+  min-width: 55px;
+  min-height: 20px;
 }
 
 .SortingSortByandOrder {

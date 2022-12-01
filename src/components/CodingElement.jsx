@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import ArticleCard from "./ArticleCard";
 import { useParams } from "react-router-dom";
+import Context from "./Context";
+import React, { useContext } from "react";
 import SortBar from "./SortBar";
 
 const CodingElement = (props) => {
   const { setSortBy } = props;
+
+  const value = useContext(Context);
 
   const [topicArticleList, setTopicArticleList] = useState([]);
 
@@ -18,7 +22,38 @@ const CodingElement = (props) => {
         setTopicArticleList(data);
       });
     });
-  }, [topic]);
+  }, [topic,value.sortBy, value.order]);
+
+  if (value.sortBy === "commentCount" && value.order === "asc") {
+    topicArticleList.sort((a, b) => {
+      return a.comment_count>b.comment_count ? -1 : 1
+    })}
+
+    if (value.sortBy === "commentCount" && value.order === "desc") {
+      topicArticleList.sort((a, b) => {
+        return a.comment_count>b.comment_count ? 1 : -1
+      })}
+
+      if (value.sortBy === "votes" && value.order === "asc") {
+        topicArticleList.sort((a, b) => {
+          return a.votes>b.votes ? -1 : 1
+        })}
+  
+        if (value.sortBy === "votes" && value.order === "desc") {
+          topicArticleList.sort((a, b) => {
+            return a.votes>b.votes ? 1 : -1
+          })}
+  
+          if (value.sortBy === "publishedDate" && value.order === "asc") {
+            topicArticleList.sort((a, b) => {
+              return a.created_at>b.created_at ? -1 : 1
+            })}
+      
+            if (value.sortBy === "publishedDate" && value.order === "desc") {
+              topicArticleList.sort((a, b) => {
+                return a.created_at>b.created_at ? 1 : -1
+              })}
+
 
   return (
     <>
