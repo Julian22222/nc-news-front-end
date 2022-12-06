@@ -20,7 +20,7 @@ const IndividualArticle = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://nc-news-julian.herokuapp.com/api/articles/${article_id}`
+      `https://nc-news-project-1kbi.onrender.com/api/articles/${article_id}`
     ).then((res) => {
       res.json().then((data) => {
         setArticle(data);
