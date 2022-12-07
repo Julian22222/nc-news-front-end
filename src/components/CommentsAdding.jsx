@@ -30,7 +30,7 @@ const CommentsAdding = (props) => {
     SetInput("");
 
     fetch(
-      `https://nc-news-julian.herokuapp.com/api/articles/${article_id}/comments`,
+      `https://nc-news-project-0m8t.onrender.com/api/articles/${article_id}/comments`,
       {
         method: "POST",
         body: JSON.stringify({ username: value.cardUser, body: input }),

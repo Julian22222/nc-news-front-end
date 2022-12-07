@@ -20,7 +20,7 @@ export default function DeleteComment(props) {
     setErr(null);
     setCommentIncrementCounter((currentComments) => currentComments - 1);
 
-    fetch(`https://nc-news-julian.herokuapp.com/api/comments/${comment_id}`, {
+    fetch(`https://nc-news-project-0m8t.onrender.com/api/comments/${comment_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",

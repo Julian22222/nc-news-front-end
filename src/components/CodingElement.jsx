@@ -16,7 +16,7 @@ const CodingElement = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://nc-news-julian.herokuapp.com/api/articles?topic=${topic}`
+      `https://nc-news-project-0m8t.onrender.com/api/articles?topic=${topic}`
     ).then((res) => {
       res.json().then((data) => {
         setTopicArticleList(data);

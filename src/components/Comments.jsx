@@ -36,7 +36,7 @@ const Comments = (props) => {
 
   useEffect(() => {
     fetch(
-      `http://nc-news-julian.herokuapp.com/api/articles/${article_id}/comments`
+      `https://nc-news-project-0m8t.onrender.com/api/articles/${article_id}/comments`
     ).then((res) => {
       res.json().then(({ comment }) => {
         setComments(comment);

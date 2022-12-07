@@ -13,7 +13,9 @@ const ArticleLiker = (props) => {
     setVoteIncrementCounter((currentLikes) => currentLikes + 1);
     setErr(null);
 
-    fetch(`https://nc-news-julian.herokuapp.com/api/articles/${article_id}`, {
+    // https://nc-news-julian.herokuapp.com/api/articles/${article_id}
+
+    fetch(`https://nc-news-project-0m8t.onrender.com/api/articles/${article_id}`, {
       method: "PATCH",
       body: JSON.stringify({ inc_votes: 1 }),
       headers: {
@@ -27,7 +29,7 @@ const ArticleLiker = (props) => {
     setErr(null);
 
     // console.log(voteDecrementCounter);
-    fetch(`https://nc-news-julian.herokuapp.com/api/articles/${article_id}`, {
+    fetch(`https://nc-news-project-0m8t.onrender.com/api/articles/${article_id}`, {
       method: "PATCH",
       body: JSON.stringify({ inc_votes: -1 }),
       headers: {

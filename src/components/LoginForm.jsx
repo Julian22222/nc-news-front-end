@@ -15,7 +15,7 @@ function LoginForm({
   // const [showWelcomeMsg, setShowWelcomeMsg] = useState(false);
   //show msg welcome+ username
   useEffect(() => {
-    fetch("https://nc-news-julian.herokuapp.com/api/users")
+    fetch("https://nc-news-project-0m8t.onrender.com/api/users")
       .then((res) => {
         return res.json();
       })
