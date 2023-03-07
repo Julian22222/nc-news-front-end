@@ -20,17 +20,19 @@ export default function DeleteComment(props) {
     setErr(null);
     setCommentIncrementCounter((currentComments) => currentComments - 1);
 
-    fetch(`https://nc-news-project-0m8t.onrender.com/api/comments/${comment_id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-type": "application/json",
-      },
-    }).then((response) => {
+    fetch(
+      `https://nc-news-project-zuj8.onrender.com/api/comments/${comment_id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    ).then((response) => {
       alert("Your comment has been deleted!");
     });
     setDeleteCommentIsLoading(false);
-    setCommentIsDeleted(true)
- .catch((err) => {
+    setCommentIsDeleted(true).catch((err) => {
       setErr("Your comment request has failed. Please try again");
     });
   };

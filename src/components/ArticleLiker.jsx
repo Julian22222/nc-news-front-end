@@ -15,13 +15,18 @@ const ArticleLiker = (props) => {
 
     // https://nc-news-julian.herokuapp.com/api/articles/${article_id}
 
-    fetch(`https://nc-news-project-0m8t.onrender.com/api/articles/${article_id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ inc_votes: 1 }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    }).then((response) => response.json()).catch((err))
+    fetch(
+      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify({ inc_votes: 1 }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .catch(err);
   };
 
   const handleDecrementVote = () => {
@@ -29,19 +34,23 @@ const ArticleLiker = (props) => {
     setErr(null);
 
     // console.log(voteDecrementCounter);
-    fetch(`https://nc-news-project-0m8t.onrender.com/api/articles/${article_id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ inc_votes: -1 }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    }).then((response) => response.json()).catch((err)=>{
-      setErr("Something went wrong");
-    })
+    fetch(
+      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify({ inc_votes: -1 }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .catch((err) => {
+        setErr("Something went wrong");
+      });
   };
 
   if (err) return <p>{err}</p>;
-
 
   return (
     <>

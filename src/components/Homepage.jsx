@@ -11,7 +11,7 @@ const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://nc-news-project-0m8t.onrender.com/api/articles")
+    fetch("https://nc-news-project-zuj8.onrender.com/api/articles")
       .then((res) => {
         return res.json();
       })
@@ -19,43 +19,47 @@ const Homepage = () => {
         setArticleList(data);
         setIsLoading(false);
       });
-  }, [articleList,value.sortBy, value.order]);
+  }, [articleList, value.sortBy, value.order]);
 
   // console.log(articleList);
 
   if (isLoading) return <h2>Loading ...</h2>;
 
   if (value.sortBy === "commentCount" && value.order === "asc") {
-      articleList.sort((a, b) => {
-        return a.comment_count>b.comment_count ? -1 : 1
-      })
+    articleList.sort((a, b) => {
+      return a.comment_count > b.comment_count ? -1 : 1;
+    });
   }
 
   if (value.sortBy === "commentCount" && value.order === "desc") {
     articleList.sort((a, b) => {
-      return a.comment_count>b.comment_count ? 1 : -1
-    })}
+      return a.comment_count > b.comment_count ? 1 : -1;
+    });
+  }
 
-    if (value.sortBy === "votes" && value.order === "asc") {
-      articleList.sort((a, b) => {
-        return a.votes>b.votes ? -1 : 1
-      })}
+  if (value.sortBy === "votes" && value.order === "asc") {
+    articleList.sort((a, b) => {
+      return a.votes > b.votes ? -1 : 1;
+    });
+  }
 
-      if (value.sortBy === "votes" && value.order === "desc") {
-        articleList.sort((a, b) => {
-          return a.votes>b.votes ? 1 : -1
-        })}
+  if (value.sortBy === "votes" && value.order === "desc") {
+    articleList.sort((a, b) => {
+      return a.votes > b.votes ? 1 : -1;
+    });
+  }
 
-        if (value.sortBy === "publishedDate" && value.order === "asc") {
-          articleList.sort((a, b) => {
-            return a.created_at>b.created_at ? -1 : 1
-          })}
-    
-          if (value.sortBy === "publishedDate" && value.order === "desc") {
-            articleList.sort((a, b) => {
-              return a.created_at>b.created_at ? 1 : -1
-            })}
+  if (value.sortBy === "publishedDate" && value.order === "asc") {
+    articleList.sort((a, b) => {
+      return a.created_at > b.created_at ? -1 : 1;
+    });
+  }
 
+  if (value.sortBy === "publishedDate" && value.order === "desc") {
+    articleList.sort((a, b) => {
+      return a.created_at > b.created_at ? 1 : -1;
+    });
+  }
 
   return (
     <>

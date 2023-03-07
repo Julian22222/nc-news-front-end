@@ -30,7 +30,7 @@ const CommentsAdding = (props) => {
     SetInput("");
 
     fetch(
-      `https://nc-news-project-0m8t.onrender.com/api/articles/${article_id}/comments`,
+      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}/comments`,
       {
         method: "POST",
         body: JSON.stringify({ username: value.cardUser, body: input }),
@@ -40,8 +40,7 @@ const CommentsAdding = (props) => {
       }
     ).then((response) => response.json());
     setCommentsIsLoading(false);
-    setCommentIsPosted(true)
-    .catch((err) => {
+    setCommentIsPosted(true).catch((err) => {
       setErr("Your comment request timed out, please try again.");
     });
   };
