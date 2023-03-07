@@ -4,7 +4,6 @@ import Context from "./Context";
 import UserCard from "./UserCard";
 
 function LoginForm({
-  Login,
   error,
   showLoginBtn,
   setShowLoginBtn,
@@ -12,8 +11,7 @@ function LoginForm({
   showWelcomeMsg,
 }) {
   const [showAllUsers, setShowAllUsers] = useState([]);
-  // const [showWelcomeMsg, setShowWelcomeMsg] = useState(false);
-  //show msg welcome+ username
+
   useEffect(() => {
     fetch("https://nc-news-project-zuj8.onrender.com/api/users")
       .then((res) => {
@@ -49,7 +47,7 @@ function LoginForm({
               setShowLoginForm={setShowLoginForm}
             />
 
-            {error != "" ? <div className="error">{error}</div> : ""}
+            {error !== "" ? <div className="error">{error}</div> : ""}
           </>
         ) : null}
         {showLoginBtn ? (

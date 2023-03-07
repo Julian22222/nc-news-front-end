@@ -1,11 +1,8 @@
-// import { useState, useEffect } from "react";
 import React, { useContext } from "react";
 import Context from "./Context";
 
-const CommentAddButton = (props) => {
-  //   const [pleaselogin, setPleaseLogin] = useState(false);
-
-  const { setIsRendering, user, setUser } = props;
+const CommentAddButton = ({ setIsRendering }) => {
+  // const { setIsRendering } = props;
 
   const value = useContext(Context);
 

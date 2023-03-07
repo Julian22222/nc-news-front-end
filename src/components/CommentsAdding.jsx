@@ -8,7 +8,6 @@ const CommentsAdding = (props) => {
     input,
     setLeaveComment,
     article_id,
-    // commentIncrementCounter,
     setCommentIncrementCounter,
     setCommentsIsLoading,
     setCommentIsPosted,

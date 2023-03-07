@@ -13,10 +13,9 @@ const UserCard = (props) => {
     // console.log(event.target.previousSibling.data);
     value.setCardUser(event.target.previousSibling.textContent);
     setShowWelcomeMsg(true);
-    //////WELCOME DOSN't WORK
   };
 
-  return value.cardUser == "" ? (
+  return value.cardUser === "" ? (
     <ul>
       {showAllUsers.map((user) => {
         return (

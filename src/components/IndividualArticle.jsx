@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import ArticleLiker from "./ArticleLiker";
 import Comments from "./Comments";
 import moment from "moment/moment";
-// import User from "./User";
 
 const IndividualArticle = (props) => {
   const { user, setUser } = props;

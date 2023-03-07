@@ -2,12 +2,9 @@ import React from "react";
 import { useState } from "react";
 
 export default function DeleteComment(props) {
-  //   const [isLoading, setIsLoading] = useState(null);
-
   const {
     comment_id,
     setDeleteCommentIsLoading,
-    setComments,
     setCommentIsDeleted,
     setCommentIncrementCounter,
   } = props;

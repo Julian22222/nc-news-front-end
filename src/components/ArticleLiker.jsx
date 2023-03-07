@@ -13,8 +13,6 @@ const ArticleLiker = (props) => {
     setVoteIncrementCounter((currentLikes) => currentLikes + 1);
     setErr(null);
 
-    // https://nc-news-julian.herokuapp.com/api/articles/${article_id}
-
     fetch(
       `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}`,
       {
@@ -64,6 +62,7 @@ const ArticleLiker = (props) => {
       >
         <img
           src=" https://www.freeiconspng.com/thumbs/youtube-like-png/youtube-like-button-png-11.png"
+          alt="like button"
           className="LikeBtn"
         />
         Like
@@ -74,6 +73,7 @@ const ArticleLiker = (props) => {
       >
         <img
           src="https://www.freeiconspng.com/thumbs/youtube-dislike-png/black-and-white-youtube-dislike-png-icon-22.png"
+          alt="dislike button"
           className="LikeBtn"
         />
         Dislike
