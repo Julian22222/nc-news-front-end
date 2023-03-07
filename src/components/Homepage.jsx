@@ -65,7 +65,7 @@ const Homepage = () => {
     <>
       <SortBar setArticleList={setArticleList} articleList={articleList} />
       <ul>
-        {articleList.map((article) => {
+        {articleList?.map((article) => {
           return (
             <li key={(article, article.article_id)} className="articlecards">
               <ArticleCard

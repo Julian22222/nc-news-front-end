@@ -86,7 +86,7 @@ const Comments = (props) => {
 
       <p>Comments:</p>
       <ul>
-        {comments.map((myComment) => {
+        {comments?.map((myComment) => {
           return (
             <li key={myComment.comment_id} className="EachCommentlecard">
               <p className="AuthorComment">Author: {myComment.author}</p>

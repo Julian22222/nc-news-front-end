@@ -6,8 +6,6 @@ import React, { useContext } from "react";
 import SortBar from "./SortBar";
 
 const CodingElement = (props) => {
-  const { setSortBy } = props;
-
   const value = useContext(Context);
 
   const [topicArticleList, setTopicArticleList] = useState([]);
