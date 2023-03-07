@@ -16,44 +16,49 @@ const CodingElement = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://nc-news-project-0m8t.onrender.com/api/articles?topic=${topic}`
+      `https://nc-news-project-zuj8.onrender.com/api/articles?topic=${topic}`
     ).then((res) => {
       res.json().then((data) => {
         setTopicArticleList(data);
       });
     });
-  }, [topic,value.sortBy, value.order]);
+  }, [topic, value.sortBy, value.order]);
 
   if (value.sortBy === "commentCount" && value.order === "asc") {
     topicArticleList.sort((a, b) => {
-      return a.comment_count>b.comment_count ? -1 : 1
-    })}
+      return a.comment_count > b.comment_count ? -1 : 1;
+    });
+  }
 
-    if (value.sortBy === "commentCount" && value.order === "desc") {
-      topicArticleList.sort((a, b) => {
-        return a.comment_count>b.comment_count ? 1 : -1
-      })}
+  if (value.sortBy === "commentCount" && value.order === "desc") {
+    topicArticleList.sort((a, b) => {
+      return a.comment_count > b.comment_count ? 1 : -1;
+    });
+  }
 
-      if (value.sortBy === "votes" && value.order === "asc") {
-        topicArticleList.sort((a, b) => {
-          return a.votes>b.votes ? -1 : 1
-        })}
-  
-        if (value.sortBy === "votes" && value.order === "desc") {
-          topicArticleList.sort((a, b) => {
-            return a.votes>b.votes ? 1 : -1
-          })}
-  
-          if (value.sortBy === "publishedDate" && value.order === "asc") {
-            topicArticleList.sort((a, b) => {
-              return a.created_at>b.created_at ? -1 : 1
-            })}
-      
-            if (value.sortBy === "publishedDate" && value.order === "desc") {
-              topicArticleList.sort((a, b) => {
-                return a.created_at>b.created_at ? 1 : -1
-              })}
+  if (value.sortBy === "votes" && value.order === "asc") {
+    topicArticleList.sort((a, b) => {
+      return a.votes > b.votes ? -1 : 1;
+    });
+  }
 
+  if (value.sortBy === "votes" && value.order === "desc") {
+    topicArticleList.sort((a, b) => {
+      return a.votes > b.votes ? 1 : -1;
+    });
+  }
+
+  if (value.sortBy === "publishedDate" && value.order === "asc") {
+    topicArticleList.sort((a, b) => {
+      return a.created_at > b.created_at ? -1 : 1;
+    });
+  }
+
+  if (value.sortBy === "publishedDate" && value.order === "desc") {
+    topicArticleList.sort((a, b) => {
+      return a.created_at > b.created_at ? 1 : -1;
+    });
+  }
 
   return (
     <>
