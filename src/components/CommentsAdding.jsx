@@ -32,10 +32,10 @@ const CommentsAdding = (props) => {
       `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}/comments`,
       {
         method: "POST",
-        body: JSON.stringify({ username: value.cardUser, body: input }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
         },
+        body: JSON.stringify({ username: value.cardUser, body: input }),
       }
     ).then((response) => response.json());
     setCommentsIsLoading(false);

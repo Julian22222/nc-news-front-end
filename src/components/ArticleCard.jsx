@@ -6,9 +6,16 @@ const ArticleCard = (props) => {
   const time = moment(props.created_at).format("hh:mm A");
   return (
     <div className="Card">
-      <p className="ArticleID">Article Id: {props.article_id}</p>
+      <div className="article-head-container">
+        <div className="left">
+          <p className="ArticleID">Article Id: {props.article_id}</p>
+        </div>
+        <div className="right">
+          <p className="Topic">Topic: {props.topic}</p>
+        </div>
+      </div>
       <p className="Title">Title: {props.title}</p>
-      <p className="Topic">Topic: {props.topic}</p>
+
       <strong className="DateOfPost">
         Date of post: <br></br> {date} <br></br> at {time}
       </strong>

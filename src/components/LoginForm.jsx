@@ -37,27 +37,31 @@ function LoginForm({
   };
 
   return (
-    <form>
-      <div className="form-inner">
-        {showLoginForm ? (
-          <>
-            <UserCard
-              showAllUsers={showAllUsers}
-              setShowWelcomeMsg={setShowWelcomeMsg}
-              setShowLoginForm={setShowLoginForm}
-            />
+    <div className="overlay">
+      <form>
+        <div className="form-inner">
+          {showLoginForm ? (
+            <>
+              <UserCard
+                showAllUsers={showAllUsers}
+                setShowWelcomeMsg={setShowWelcomeMsg}
+                setShowLoginForm={setShowLoginForm}
+              />
 
-            {error !== "" ? <div className="error">{error}</div> : ""}
-          </>
-        ) : null}
-        {showLoginBtn ? (
-          <button onClick={handleLogin} className="LoginBtn">
-            Login
-          </button>
-        ) : null}
-        {!showWelcomeMsg ? <p>Welcome, unauthorised user!</p> : null}
-      </div>
-    </form>
+              {error !== "" ? <div className="error">{error}</div> : ""}
+            </>
+          ) : null}
+          {showLoginBtn ? (
+            <button onClick={handleLogin} className="LoginBtn">
+              Login
+            </button>
+          ) : null}
+          {!showWelcomeMsg ? (
+            <p className="welcome">Welcome, unauthorised user!</p>
+          ) : null}
+        </div>
+      </form>
+    </div>
   );
 }
 

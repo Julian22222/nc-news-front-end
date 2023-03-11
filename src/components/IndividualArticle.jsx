@@ -33,9 +33,15 @@ const IndividualArticle = (props) => {
     <>
       <div className="card">
         <div className="EachArticle">
-          <p className="ArticleID">Article Id: {article.article_id}</p>
+          <div className="article-head-container">
+            <div className="left">
+              <p className="ArticleID">Article Id: {article.article_id}</p>
+            </div>
+            <div className="right">
+              <p className="Topic">Topic: {article.topic}</p>
+            </div>
+          </div>
           <p className="Title">Title: {article.title}</p>
-          <p className="Topic">Topic: {article.topic}</p>
           <p className="Author">Author: {article.author}</p>
           <p className="BodyOfEachArticle">Body: {article.body}</p>
           <p className="DateofP">

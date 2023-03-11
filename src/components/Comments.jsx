@@ -6,14 +6,8 @@ import Context from "./Context";
 import DeleteComment from "./DeleteComment";
 
 const Comments = (props) => {
-  const {
-    article_id,
-    user,
-    setUser,
-    commentIncrementCounter,
-    setCommentIncrementCounter,
-    seeAllComments,
-  } = props;
+  const { article_id, commentIncrementCounter, setCommentIncrementCounter } =
+    props;
   const [comments, setComments] = useState([]);
   //all comments info
   const [isLoading, setIsLoading] = useState(true);
@@ -43,17 +37,15 @@ const Comments = (props) => {
         setIsLoading(false);
       });
     });
-  }, [comments]);
+  }, [comments, article_id, leaveComment]);
   if (isLoading) return <h2>Loading ...</h2>;
 
   return (
     <>
       <CommentAddButton
         comments={comments}
-        setComments={setComments}
+        // setComments={setComments}
         setIsRendering={setIsRendering}
-        user={user}
-        setUser={setUser}
       />
       {isRendering ? (
         <>
@@ -84,16 +76,18 @@ const Comments = (props) => {
       {commentIsDeleted ? <p>Your comment has been deleted!</p> : null}
       {comentIsPosted ? <p>Your comment has been posted!</p> : null}
 
-      <p>Comments:</p>
+      <p className="comments-text">Comments:</p>
       <ul>
         {comments?.map((myComment) => {
           return (
-            <li key={myComment.comment_id} className="EachCommentlecard">
-              <p className="AuthorComment">Author: {myComment.author}</p>
-              <p className="DateofComment">
-                Posted on {myComment.created_at.slice(0, 10)} at{" "}
-                {myComment.created_at.slice(11, -8)}
-              </p>
+            <li key={myComment.comment_id} className="EachCommentCard">
+              <div className="comment-container">
+                <p className="AuthorComment">Author: {myComment.author}</p>
+                <p className="DateofComment">
+                  Posted on {myComment.created_at.slice(0, 10)} at{" "}
+                  {myComment.created_at.slice(11, -8)}
+                </p>
+              </div>
               {myComment.body}
               {value.cardUser === myComment.author ? (
                 <DeleteComment

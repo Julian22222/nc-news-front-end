@@ -20,7 +20,9 @@ const User = () => {
 
   return (
     <>
-      {value.cardUser !== "" ? <h4>Welcome, {value.cardUser}</h4> : null}
+      {value.cardUser !== "" ? (
+        <h4 className="welcome">Welcome, {value.cardUser}</h4>
+      ) : null}
       {value.cardUser !== "" ? (
         <div className="welcome">
           <button onClick={Logout} className="LogoutBtn">
