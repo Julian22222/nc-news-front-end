@@ -29,7 +29,7 @@ const CommentsAdding = (props) => {
     SetInput("");
 
     fetch(
-      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}/comments`,
+      `https://nc-news-project-zorm.onrender.com/api/articles/${article_id}/comments`,
       {
         method: "POST",
         headers: {

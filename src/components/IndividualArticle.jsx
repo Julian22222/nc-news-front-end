@@ -19,7 +19,7 @@ const IndividualArticle = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}`
+      `https://nc-news-project-zorm.onrender.com/api/articles/${article_id}`
     ).then((res) => {
       res.json().then((data) => {
         setArticle(data);

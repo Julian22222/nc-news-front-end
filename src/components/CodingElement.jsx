@@ -14,7 +14,7 @@ const CodingElement = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://nc-news-project-zuj8.onrender.com/api/articles?topic=${topic}`
+      `https://nc-news-project-zorm.onrender.com/api/articles?topic=${topic}`
     ).then((res) => {
       res.json().then((data) => {
         setTopicArticleList(data);

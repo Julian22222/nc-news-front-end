@@ -13,7 +13,7 @@ function LoginForm({
   const [showAllUsers, setShowAllUsers] = useState([]);
 
   useEffect(() => {
-    fetch("https://nc-news-project-zuj8.onrender.com/api/users")
+    fetch("https://nc-news-project-zorm.onrender.com/api/users")
       .then((res) => {
         return res.json();
       })

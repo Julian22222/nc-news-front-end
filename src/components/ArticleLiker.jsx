@@ -12,7 +12,7 @@ const ArticleLiker = (props) => {
     setErr(null);
 
     fetch(
-      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}`,
+      `https://nc-news-project-zorm.onrender.com/api/articles/${article_id}`,
       {
         method: "PATCH",
         body: JSON.stringify({ inc_votes: 1 }),
@@ -31,7 +31,7 @@ const ArticleLiker = (props) => {
 
     // console.log(voteDecrementCounter);
     fetch(
-      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}`,
+      `https://nc-news-project-zorm.onrender.com/api/articles/${article_id}`,
       {
         method: "PATCH",
         body: JSON.stringify({ inc_votes: -1 }),

@@ -11,7 +11,7 @@ const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://nc-news-project-zuj8.onrender.com/api/articles")
+    fetch("https://nc-news-project-zorm.onrender.com/api/articles")
       .then((res) => {
         return res.json();
       })

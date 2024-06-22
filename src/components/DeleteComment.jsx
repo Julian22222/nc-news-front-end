@@ -18,7 +18,7 @@ export default function DeleteComment(props) {
     setCommentIncrementCounter((currentComments) => currentComments - 1);
 
     fetch(
-      `https://nc-news-project-zuj8.onrender.com/api/comments/${comment_id}`,
+      `https://nc-news-project-zorm.onrender.com/api/comments/${comment_id}`,
       {
         method: "DELETE",
         headers: {

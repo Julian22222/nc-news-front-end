@@ -30,7 +30,7 @@ const Comments = (props) => {
 
   useEffect(() => {
     fetch(
-      `https://nc-news-project-zuj8.onrender.com/api/articles/${article_id}/comments`
+      `https://nc-news-project-zorm.onrender.com/api/articles/${article_id}/comments`
     ).then((res) => {
       res.json().then(({ comment }) => {
         setComments(comment);
