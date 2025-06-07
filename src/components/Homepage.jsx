@@ -23,7 +23,14 @@ const Homepage = () => {
 
   // console.log(articleList);
 
-  if (isLoading) return <h2>Loading ...</h2>;
+  if (isLoading) {
+    return (
+      <div>
+        <img src="/IMG/logo1.gif" alt="gif logo" />
+        <h2>Loading ...</h2>
+      </div>
+    );
+  }
 
   if (value.sortBy === "commentCount" && value.order === "asc") {
     articleList.sort((a, b) => {
