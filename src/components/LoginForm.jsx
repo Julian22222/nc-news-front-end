@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import React, { useContext } from "react";
 import Context from "./Context";
 import UserCard from "./UserCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 
 function LoginForm({
   error,
@@ -53,7 +55,7 @@ function LoginForm({
           ) : null}
           {showLoginBtn ? (
             <button onClick={handleLogin} className="LoginBtn">
-              Login
+              <FontAwesomeIcon icon={faArrowRightToBracket} /> Login
             </button>
           ) : null}
           {!showWelcomeMsg ? (

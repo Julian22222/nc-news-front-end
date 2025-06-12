@@ -51,13 +51,13 @@ body {
   position: absolute;
   top: 85px;
   right: 5%;
-  background: rgb(49, 180, 105);
+  background: rgb(33, 158, 33);
   margin-right: 30%;
-  width: 55px;
-  height: 3%;
+  width: 100px;
+  height: 40px;
   /* min-width: 55px;
   min-height: 20px; */
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .LoginBtn:hover,
@@ -300,4 +300,13 @@ body {
 
 .SortByOptions {
   margin-right: 15px;
+}
+
+/* Phone screen */
+/* If [device width] is less than or equal to 420px, then do {…}” */
+@media (max-width: 420px) {
+  .giflogo1 {
+    width: 50%;
+    height: 50%;
+  }
 }

@@ -26,7 +26,7 @@ const Homepage = () => {
   if (isLoading) {
     return (
       <div>
-        <img src="/IMG/logo1.gif" alt="gif logo" />
+        <img src="/IMG/logo1.gif" alt="gif logo" className="giflogo1" />
         <h2>Loading ...</h2>
       </div>
     );

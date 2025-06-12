@@ -22,9 +22,9 @@ const ArticleCard = (props) => {
 
       <p>Votes: {props.votes}</p>
       <p>Comment count: {props.comment_count}</p>
-      <button className="btnReadArticle">
-        <Link to={`/articles/${props.article_id}`}>Read article</Link>
-      </button>
+      <Link to={`/articles/${props.article_id}`} className="btnReadArticle">
+        Read article
+      </Link>
     </div>
   );
 };
