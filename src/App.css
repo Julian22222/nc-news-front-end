@@ -51,7 +51,7 @@ body {
   position: absolute;
   top: 85px;
   right: 5%;
-  background: rgb(33, 158, 33);
+  background: rgba(104, 202, 101, 0.61);
   margin-right: 30%;
   width: 100px;
   height: 40px;
@@ -201,30 +201,19 @@ body {
 }
 
 .btnReadArticle {
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 80%;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  background-color: transparent;
   border-radius: 10px;
   border: 1.5px solid rgb(241, 199, 160);
-  /* color: rgb(141, 181, 145); */
   background-color: transparent;
   text-transform: uppercase;
   padding: 2px 5px;
-  /* width: 100px; */
 }
 
 /* ////////////////////////////// */
 
 .Usercard {
-  height: 150px;
-  margin: 2% 2%;
-  margin-left: 1%;
-
+  height: 100px;
   display: inline-table;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 150px;
 }
 
@@ -276,16 +265,13 @@ body {
 }
 
 .UsercardButton {
-  height: 300px;
-  margin: 2% 2%;
-  margin-left: 1%;
-
-  /* display: inline-table; */
+  height: 200px;
+  margin: 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  border-radius: 5px;
-  width: 300px;
-  background-color: rgba(109, 131, 137, 0.61);
+  border-radius: 10px;
+  width: 200px;
+  background-color: rgba(104, 202, 101, 0.61);
 }
 
 .LikeBtn {
