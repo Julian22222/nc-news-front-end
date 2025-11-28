@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
-
 import Context from "./Context";
 
 const NavBarTopics = () => {
@@ -8,23 +7,21 @@ const NavBarTopics = () => {
   const myTopics = ["all", "coding", "cooking", "football"];
 
   return (
-    <div className="topicsTitle">
-      <strong> Topics: </strong>
-      {myTopics.map((topic) => {
-        return topic === "all" ? (
-          <li className="navBarTopics" key={`${topic} ${value.cardUser}`}>
-            <Link to={`/`} key={`${topic}`}>
-              {" "}
-              {topic}
-            </Link>
+    <ul className="topics-container">
+      <strong className="topics-title">Topics:</strong>
+
+      {myTopics.map((topic) =>
+        topic === "all" ? (
+          <li className="topic-chip" key={`${topic} ${value.cardUser}`}>
+            <Link to="/">{topic}</Link>
           </li>
         ) : (
-          <Link to={`/${topic}`} key={`${value.pleaselogin} ${topic}`}>
-            <li className="navBarTopics">{topic}</li>
-          </Link>
-        );
-      })}
-    </div>
+          <li className="topic-chip" key={`${topic} ${value.cardUser}`}>
+            <Link to={`/${topic}`}>{topic}</Link>
+          </li>
+        )
+      )}
+    </ul>
   );
 };
 

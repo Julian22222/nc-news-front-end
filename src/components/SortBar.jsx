@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Context from "./Context";
 import React, { useContext } from "react";
 
@@ -18,9 +17,7 @@ const SortBar = (props) => {
   const handleOrder = (event) => {
     console.log(event.target.value);
     value.setOrder(event.target.value);
-    
   };
-
 
   return (
     <div className="SortingSortByandOrder">
