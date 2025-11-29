@@ -25,20 +25,26 @@ export default function DeleteComment(props) {
           "Content-type": "application/json",
         },
       }
-    ).then((response) => {
-      alert("Your comment has been deleted!");
-    });
-    setDeleteCommentIsLoading(false);
-    setCommentIsDeleted(true).catch((err) => {
-      setErr("Your comment request has failed. Please try again");
-    });
+    )
+      .then((response) => {
+        alert("Your comment has been deleted!");
+      })
+      .then(() => {
+        setDeleteCommentIsLoading(false);
+        setCommentIsDeleted(true);
+      })
+      .catch((err) => {
+        setErr("Your comment request has failed. Please try again");
+      });
   };
 
   if (err) <p>{err}</p>;
 
   return (
     <>
-      <br></br>
+      <br />
+      <br />
+      <br />
       <button onClick={handleDelete} className="DeleteBtn">
         DeleteComment
       </button>

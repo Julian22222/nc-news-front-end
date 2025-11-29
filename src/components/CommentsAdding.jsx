@@ -37,11 +37,15 @@ const CommentsAdding = (props) => {
         },
         body: JSON.stringify({ username: value.cardUser, body: input }),
       }
-    ).then((response) => response.json());
-    setCommentsIsLoading(false);
-    setCommentIsPosted(true).catch((err) => {
-      setErr("Your comment request timed out, please try again.");
-    });
+    )
+      .then((response) => response.json())
+      .then(() => {
+        setCommentsIsLoading(false);
+        setCommentIsPosted(true);
+      })
+      .catch((err) => {
+        setErr("Your comment request timed out, please try again.");
+      });
   };
 
   if (err) <p>{err}</p>;
